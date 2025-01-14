@@ -9,13 +9,27 @@ const Footer = () => {
           <p className="mt-3 text-poppins fs-medium">OASIS HOTEL</p>
         </div>
 
-        <article className="d-flex justify-content-evenly mx-4 my-3">
-          <p>Contacto</p>
-          <p>Nosotros</p>
-          <p>Galeria</p>
-          <p>Habitaciones</p>
-          <p>Politicas</p>
-          <p>FAQs</p>
+        <article className="container mt-4">
+          <div className="row row-cols-2 row-cols-md-6 g-2 g-md-3 text-center">
+            <div className="col">
+              <p>Contacto</p>
+            </div>
+            <div className="col">
+              <p>Galeria</p>
+            </div>
+            <div className="col">
+              <p>Sobre Nosotros</p>
+            </div>
+            <div className="col">
+              <p>Habitaciones</p>
+            </div>
+            <div className="col">
+              <p>Politicas</p>
+            </div>
+            <div className="col">
+              <p>FAQs</p>
+            </div>
+          </div>
         </article>
 
         <article className="d-flex justify-content-center mx-4 my-3">
@@ -31,8 +45,7 @@ const Footer = () => {
         </article>
 
         <p className="text-center text-nunito fw-light bg-arena text-light m-0 py-1 fs-6">
-          Dylan©Dev©2024. Un proyecto para Rolling Code School. Todos los
-          derechos reservados
+          DylanSDev©2024. Todos los derechos reservados
         </p>
       </section>
     </footer>
