@@ -48,7 +48,7 @@ const menu = () => {
               className={({ isActive }) =>
                 isActive ? "nav-link active ms-4  me-4" : "nav-link ms-4  me-4"
               }
-              to="/Galeria"
+              to="/galeria"
             >
               Galeria
             </NavLink>

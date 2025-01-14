@@ -1,6 +1,6 @@
 const Error404 = () => {
   return (
-    <div>
+    <div className="mainSection">
       <h3>Error 404. No se encontró la página.</h3>
     </div>
   );

@@ -44,15 +44,17 @@
 .boton-Identificarse {
   border: 2px solid #e8c093 !important;
   border-radius: 24px;
-  background-color: transparent;
+  background: transparent;
   color: #e8c093;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background 0.7s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .boton-Identificarse:hover {
-  background-color: #e8c093;
+  font-weight: 400;
+  background: linear-gradient(45deg, #e8c093, #89bbad, #17598c);
+  border: 0px !important;
   color: white !important;
-  transform: scale(1.07);
+  transform: scale(1.11);
 }
 
 /* Estilos para los links del navbar */
@@ -77,4 +79,32 @@
 
 .nav-link.active::after {
   width: 100%;
+}
+
+/* Estilos para el footer */
+/* Aplicamos el estilo a los iconos dentro de linkFooter */
+.linkFooter {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.6s ease; /* transición suave */
+  color: #393632; /* color por defecto */
+}
+
+/* Efecto cuando se pasa el mouse sobre el contenedor linkFooter */
+.linkFooter:hover {
+  transform: scale(1.2); /* Escala el icono */
+  animation: gradient-fill 0.6s forwards; /* Animación del degradado */
+}
+
+/* Definición de la animación del degradado */
+@keyframes gradient-fill {
+  0% {
+    background: transparent;
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(45deg, #e8c093, #89bbad, #17598c);
+    -webkit-background-clip: text;
+    color: transparent; /* Hace que el icono tome el color del degradado */
+  }
 }
