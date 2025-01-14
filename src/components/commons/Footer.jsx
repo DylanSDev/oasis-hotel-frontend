@@ -33,15 +33,30 @@ const Footer = () => {
         </article>
 
         <article className="d-flex justify-content-center mx-4 my-3">
-          <div className="mx-4">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4 text-secondary"
+          >
             <i className="bi bi-facebook fs-3"></i>
-          </div>
-          <div className="mx-4">
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4 text-secondary"
+          >
             <i className="bi bi-twitter-x fs-3"></i>
-          </div>
-          <div className="mx-4">
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4 text-secondary"
+          >
             <i className="bi bi-instagram fs-3"></i>
-          </div>
+          </a>
         </article>
 
         <p className="text-center text-nunito fw-light bg-arena text-light m-0 py-1 fs-6">
