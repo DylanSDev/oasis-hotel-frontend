@@ -1,12 +1,9 @@
 import "./App.css";
-import { TreePalmIcon as PalmtreeFill } from "lucide-react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Menu from "./components/commons/Menu";
 
 function App() {
-  return (
-    <>
-      <h1>Hola Mundo</h1>
-    </>
-  );
+  return <Menu></Menu>;
 }
 
 export default App;

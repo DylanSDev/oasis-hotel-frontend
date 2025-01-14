@@ -1,0 +1,17 @@
+/* Fuentes a utilizar */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+.text-nunito {
+  font-family: "Nunito";
+  font-weight: 600;
+}
+
+/* Colores a utilizar */
+.color-arena {
+  color: #e8c093 !important;
+}
+
+.boton-Identificarse {
+  border: 2px solid #e8c093 !important;
+  border-radius: 24px;
+}
