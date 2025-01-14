@@ -36,7 +36,45 @@
 }
 
 /* Estilos específicos */
+/* Navbar */
+.navbar-brand:hover {
+  transform: scale(1.1);
+}
+
 .boton-Identificarse {
   border: 2px solid #e8c093 !important;
   border-radius: 24px;
+  background-color: transparent;
+  color: #e8c093;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-Identificarse:hover {
+  background-color: #e8c093;
+  color: white !important;
+  transform: scale(1.07);
+}
+
+/* Estilos para los links del navbar */
+.nav-link {
+  padding-bottom: 4px !important ;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e8c093;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link.active::after {
+  width: 100%;
 }

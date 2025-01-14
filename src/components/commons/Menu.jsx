@@ -6,7 +6,7 @@ const menu = () => {
   return (
     <Navbar expand="lg" className="py-4 text-nunito">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={Link} to="/">
           {" "}
           <img
             src={logo}
@@ -15,35 +15,70 @@ const menu = () => {
             width={30}
           />
         </Navbar.Brand>
-        <Navbar.Brand href="#home" className="d-lg-none text-poppins fs-medium">
+        <Navbar.Brand
+          as={Link}
+          to="/"
+          className="d-lg-none text-poppins fs-medium text-secondary"
+        >
           OASIS HOTEL
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " className="me-4" />
         <Navbar.Collapse id="basic-navbar-nav" className="text-end">
           <Nav className="mx-lg-auto mt-3 mt-lg-0">
-            <Nav.Link href="#home" className="ms-3  pe-4">
+            <NavLink
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+              }
+              to="/"
+            >
               Inicio
-            </Nav.Link>
-            <Nav.Link href="#link" className="ms-3  pe-4">
+            </NavLink>
+            <NavLink
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+              }
+              to="/habitaciones"
+            >
               Habitaciones
-            </Nav.Link>
-            <Nav.Link href="#link" className="ms-3  pe-4">
-              Galería
-            </Nav.Link>
-            <Nav.Link href="#link" className="ms-3  pe-4">
+            </NavLink>
+            <NavLink
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+              }
+              to="/Galeria"
+            >
+              Galeria
+            </NavLink>
+            <NavLink
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+              }
+              to="/nosotros"
+            >
               Nosotros
-            </Nav.Link>
-            <Nav.Link href="#link" className="ms-3 pe-4">
+            </NavLink>
+            <NavLink
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+              }
+              to="/contacto"
+            >
               Contacto
-            </Nav.Link>
+            </NavLink>
           </Nav>
           <Nav className="align-items-end">
-            <Nav.Link
-              href="#link"
-              className="py-2 px-4 color-arena boton-Identificarse text-end text-center"
+            <NavLink
+              end
+              className="py-2 px-4 color-arena boton-Identificarse text-end text-center text-decoration-none"
+              to="/identificarse"
             >
               Identificarse
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
