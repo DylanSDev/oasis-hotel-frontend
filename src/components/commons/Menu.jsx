@@ -15,8 +15,8 @@ const menu = () => {
             width={30}
           />
         </Navbar.Brand>
-        <Navbar.Brand href="#home" className="d-lg-none text-nunito">
-          Oasis Hotel
+        <Navbar.Brand href="#home" className="d-lg-none text-poppins fs-medium">
+          OASIS HOTEL
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav " className="me-4" />
         <Navbar.Collapse id="basic-navbar-nav" className="text-end">
