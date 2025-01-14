@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="container-fluid px-0 pt-4">
       <section>
-        <div className="text-center">
+        <div className="text-center ">
           <img src={logo} alt="logo oasis hotel" width={60} />
           <p className="mt-3 text-poppins fs-medium">OASIS HOTEL</p>
         </div>

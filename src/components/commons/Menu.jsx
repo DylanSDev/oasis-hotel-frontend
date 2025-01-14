@@ -28,7 +28,7 @@ const menu = () => {
             <NavLink
               end
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+                isActive ? "nav-link active ms-4  me-4" : "nav-link ms-4  me-4"
               }
               to="/"
             >
@@ -37,7 +37,7 @@ const menu = () => {
             <NavLink
               end
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+                isActive ? "nav-link active ms-4  me-4" : "nav-link ms-4  me-4"
               }
               to="/habitaciones"
             >
@@ -46,7 +46,7 @@ const menu = () => {
             <NavLink
               end
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+                isActive ? "nav-link active ms-4  me-4" : "nav-link ms-4  me-4"
               }
               to="/Galeria"
             >
@@ -55,7 +55,7 @@ const menu = () => {
             <NavLink
               end
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+                isActive ? "nav-link active ms-4  me-4" : "nav-link ms-4  me-4"
               }
               to="/nosotros"
             >
@@ -64,7 +64,7 @@ const menu = () => {
             <NavLink
               end
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link ms-3  pe-4"
+                isActive ? "nav-link active ms-4  me-4" : "nav-link ms-4  me-4"
               }
               to="/contacto"
             >
@@ -74,7 +74,7 @@ const menu = () => {
           <Nav className="align-items-end">
             <NavLink
               end
-              className="py-2 px-4 color-arena boton-Identificarse text-end text-center text-decoration-none"
+              className="py-2 px-4 color-arena boton-Identificarse text-end text-center text-decoration-none m-3 m-lg-0"
               to="/identificarse"
             >
               Identificarse
