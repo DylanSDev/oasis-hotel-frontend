@@ -26,7 +26,7 @@ const Principal = () => {
             </p>
             <div>
               <Link
-                className="btn btn-primary bg-arena border-0 py-2 mt-2 fw-bold"
+                className="btn btn-primary bg-arena border-0 py-2 mt-2 fw-medium"
                 to={"/habitaciones"}
               >
                 RESERVAR AHORA

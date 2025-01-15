@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const menu = () => {
   return (
-    <Navbar expand="lg" className="py-4 text-nunito">
+    <Navbar expand="lg" className="py-4 text-nunito sticky-top bg-body">
       <Container>
         <Navbar.Brand as={Link} to="/">
           {" "}

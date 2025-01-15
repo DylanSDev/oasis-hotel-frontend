@@ -35,6 +35,18 @@
   flex-grow: 1;
 }
 
+/* Estilos barra de desplazamiento */
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #e8c09300;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #e8c093ba;
+  border-radius: 18px;
+  border-right: 2px;
+}
+
 /* Estilos específicos */
 /* Navbar */
 .navbar-brand:hover {
