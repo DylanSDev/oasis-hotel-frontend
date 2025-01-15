@@ -8,7 +8,12 @@ import {
   LandPlot,
   PartyPopper,
   Dumbbell,
+  Gem,
+  HandPlatter,
+  HeartHandshake,
+  Laugh,
 } from "lucide-react";
+import { BsStarFill } from "react-icons/bs";
 
 const Principal = () => {
   return (
@@ -21,7 +26,7 @@ const Principal = () => {
             alt="Foto del Lobby del hotel"
             className="w-100 h-100 object-fit-cover position-absolute top-0 start-0 imgHeroSection"
           />
-          <div className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-2 mx-3 ps-lg-5 ms-lg-5 text-poppins">
+          <div className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-3 mx-3 ps-lg-5 ms-lg-5 text-poppins pb-5 pb-md-0">
             <p className="text-light fw-medium">Bienvenidos a</p>
             <h2 className="text-white display-4 mb-4 fw-bold">
               OASIS HOTEL <br /> Playa del Carmen
@@ -29,7 +34,7 @@ const Principal = () => {
             <p className="color-arena col-md-8 col-lg-6 fw-medium">
               "Un rincón de paraíso, solo para tí."
             </p>
-            <p className="text-light pe-3 pe-md-0 col-11 col-md-8 col-lg-6">
+            <p className="text-light pe-3 pe-md-0 col-11 col-md-8 col-lg-6 mb-4 mb-md-3">
               Escápate al corazón de Playa del Carmen y sumérgete en una
               experiencia única de lujo, confort y naturaleza.
             </p>
@@ -139,7 +144,7 @@ const Principal = () => {
                 </Card>
               </Col>
               <Col sm={12} md={4} className="mt-4 mt-md-0">
-                <Card className="rounded-5 h-100 py-1 bg-arena tarjetaAnimada">
+                <Card className="rounded-5 h-100 py-1 bg-arena border-0 tarjetaAnimada">
                   <Card.Body className="text-center">
                     <TreePalm
                       size={50}
@@ -183,7 +188,7 @@ const Principal = () => {
                 </Card>
               </Col>
               <Col sm={12} md={4} className="mt-4">
-                <Card className="rounded-5 py-1 bg-arena tarjetaAnimada h-100 ">
+                <Card className="rounded-5 py-1 bg-arena border-0 tarjetaAnimada h-100 ">
                   <Card.Body className="text-center">
                     <PartyPopper size={50} className="text-light my-3" />
                     <Card.Title className="fs-6 fw-bold">
@@ -205,6 +210,117 @@ const Principal = () => {
                     </Card.Text>
                   </Card.Body>
                 </Card>
+              </Col>
+            </Row>
+          </div>
+        </div>
+      </article>
+
+      {/* Cuarta Pantalla: Trip Advisor */}
+      <article className="vh-100 position-relative overflow-hidden">
+        <div className="min-vh-100">
+          {/* Fondo */}
+          <img
+            src="https://res.cloudinary.com/dylansdev/image/upload/v1736968964/trip-1_oy1nyh.jpg"
+            alt="Foto del Lobby del hotel"
+            className="w-100 h-100 object-fit-cover position-absolute top-0 start-0 imgHeroSection"
+          />
+          {/* Contenido */}
+          <div className="d-flex w-100 position-absolute top-0 start-0 min-vh-100 justify-content-center align-items-center">
+            <Row className="w-100 container px-4 justify-content-between">
+              <Col
+                sm={12}
+                md={5}
+                className="text-light text-poppins d-flex flex-column justify-content-center"
+              >
+                <a
+                  href="https://www.tripadvisor.com.ar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736969675/LogoTripAdvisor_pa4ctm.svg"
+                    alt="Logo Tripadvisor"
+                    className="my-4"
+                    width={270}
+                  />
+                </a>
+                <h3 className="fs-4 fw-medium">
+                  Excelentes vistas y habitaciones
+                </h3>
+                <div className="fs-3 mb-3 estrellas">
+                  <BsStarFill className="me-2" />
+                  <BsStarFill className="mx-2" />
+                  <BsStarFill className="mx-2" />
+                  <BsStarFill className="mx-2" />
+                  <BsStarFill className="ms-2" />
+                </div>
+                <p className="text-secondary">+4000 reviews de 5 estrellas</p>
+                <div>
+                  <img
+                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736970159/trip-2_mki3oz.png"
+                    alt="Usuarios trip advisor"
+                    width={200}
+                    className="mb-4"
+                  />
+                  <p className="text-secondary">Personas que nos recomiendan</p>
+                </div>
+              </Col>
+              {/* Columna de cards */}
+              <Col sm={12} md={7} className="row">
+                <Col sm={12} md={6} className="mb-3">
+                  <Card className="rounded-4  py-1 tarjetaAnimada h-100">
+                    <Card.Body>
+                      <HandPlatter size={35} className="color-arena my-3" />
+                      <Card.Title className="fw-bold fs-6">
+                        Excelentes restaurantes.
+                      </Card.Title>
+                      <Card.Text className="text-secondary">
+                        Nuestros clientes señalaron que aman nuestros
+                        restaurantes.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col sm={12} md={6} className="mb-3">
+                  <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
+                    <Card.Body>
+                      <HeartHandshake size={35} className="color-arena my-3" />
+                      <Card.Title className="fw-bold fs-6">
+                        Mejores SPA's.
+                      </Card.Title>
+                      <Card.Text className="text-secondary">
+                        Nuestros spa's son los más elegidos.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col sm={12} md={6} className="mt-3">
+                  <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
+                    <Card.Body>
+                      <Gem size={35} className="color-arena my-3" />
+                      <Card.Title className="fw-bold fs-6">
+                        Las mejores habitaciones.
+                      </Card.Title>
+                      <Card.Text className="text-secondary">
+                        Lujosas, cómodas y con una vista perfecta al mar.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col sm={12} md={6} className="mt-3">
+                  <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
+                    <Card.Body>
+                      <Laugh size={35} className="color-arena my-3" />
+                      <Card.Title className="fw-bold fs-6">
+                        Servicio increíble.
+                      </Card.Title>
+                      <Card.Text className="text-secondary">
+                        Atención unica y dedicada para cada visitante.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
               </Col>
             </Row>
           </div>

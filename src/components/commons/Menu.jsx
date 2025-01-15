@@ -18,7 +18,7 @@ const menu = () => {
         <Navbar.Brand
           as={Link}
           to="/"
-          className="d-lg-none text-poppins fs-medium text-secondary"
+          className="d-lg-none text-poppins fs-medium text-secondary ps-3 ps-md-4"
         >
           OASIS HOTEL
         </Navbar.Brand>

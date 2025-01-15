@@ -31,3 +31,14 @@
 .tarjetaAnimada:hover {
   transform: scale(1.07);
 }
+
+/* Efectos estrellas tripadvisor */
+.estrellas svg {
+  fill: #f0ca0a; /* Color base (amarillo) */
+  transition: fill 0.5s ease-in-out;
+}
+
+.estrellas:hover svg {
+  fill: #34e0a1; /* Aplica el gradiente al pasar el mouse */
+  transform: scale(1.09);
+}
