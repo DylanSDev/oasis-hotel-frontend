@@ -11,6 +11,10 @@
   font-family: "Poppins";
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .fs-medium {
   font-weight: 500;
 }
