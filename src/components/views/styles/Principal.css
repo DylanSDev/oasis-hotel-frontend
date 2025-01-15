@@ -33,6 +33,13 @@
 }
 
 /* Efectos estrellas tripadvisor */
+.fondoTripAdvisor {
+  background-image: url(https://res.cloudinary.com/dylansdev/image/upload/v1736980550/trip-1_alkldr.png);
+  background-size: cover; /* Ajusta el SVG al tamaño de la pantalla */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .estrellas svg {
   fill: #f0ca0a; /* Color base (amarillo) */
   transition: fill 0.5s ease-in-out;

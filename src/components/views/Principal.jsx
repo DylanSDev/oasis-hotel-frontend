@@ -217,113 +217,106 @@ const Principal = () => {
       </article>
 
       {/* Cuarta Pantalla: Trip Advisor */}
-      <article className="vh-100 position-relative overflow-hidden">
-        <div className="min-vh-100">
-          {/* Fondo */}
-          <img
-            src="https://res.cloudinary.com/dylansdev/image/upload/v1736968964/trip-1_oy1nyh.jpg"
-            alt="Foto del Lobby del hotel"
-            className="w-100 h-100 object-fit-cover position-absolute top-0 start-0 imgHeroSection"
-          />
-          {/* Contenido */}
-          <div className="d-flex w-100 position-absolute top-0 start-0 min-vh-100 justify-content-center align-items-center">
-            <Row className="w-100 container px-4 justify-content-between">
-              <Col
-                sm={12}
-                md={5}
-                className="text-light text-poppins d-flex flex-column justify-content-center"
+      <article className="d-flex min-vh-100 container-fluid px-4 px-lg-5 justify-content-center justify-content-md-between fondoTripAdvisor py-5 py-md-0">
+        {/* Contenido */}
+        <div className="d-flex min-vh-100 justify-content-center align-items-center container px-4 ps-lg-5 mx-2">
+          <Row className="w-100 container justify-content-between px-0">
+            <Col
+              sm={12}
+              md={5}
+              className="text-light text-poppins d-flex flex-column justify-content-center px-0"
+            >
+              <a
+                href="https://www.tripadvisor.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  href="https://www.tripadvisor.com.ar/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736969675/LogoTripAdvisor_pa4ctm.svg"
-                    alt="Logo Tripadvisor"
-                    className="my-4"
-                    width={270}
-                  />
-                </a>
-                <h3 className="fs-4 fw-medium">
-                  Excelentes vistas y habitaciones
-                </h3>
-                <div className="fs-3 mb-3 estrellas">
-                  <BsStarFill className="me-2" />
-                  <BsStarFill className="mx-2" />
-                  <BsStarFill className="mx-2" />
-                  <BsStarFill className="mx-2" />
-                  <BsStarFill className="ms-2" />
-                </div>
-                <p className="text-secondary">+4000 reviews de 5 estrellas</p>
-                <div>
-                  <img
-                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736970159/trip-2_mki3oz.png"
-                    alt="Usuarios trip advisor"
-                    width={200}
-                    className="mb-4"
-                  />
-                  <p className="text-secondary">Personas que nos recomiendan</p>
-                </div>
+                <img
+                  src="https://res.cloudinary.com/dylansdev/image/upload/v1736969675/LogoTripAdvisor_pa4ctm.svg"
+                  alt="Logo Tripadvisor"
+                  className="my-4  tarjetaAnimada"
+                  width={270}
+                />
+              </a>
+              <h3 className="fs-4 fw-medium">
+                Excelentes vistas y habitaciones
+              </h3>
+              <div className="fs-3 mb-3 estrellas">
+                <BsStarFill className="me-2" />
+                <BsStarFill className="mx-2" />
+                <BsStarFill className="mx-2" />
+                <BsStarFill className="mx-2" />
+                <BsStarFill className="ms-2" />
+              </div>
+              <p className="text-light">+4000 reviews de 5 estrellas</p>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/dylansdev/image/upload/v1736970159/trip-2_mki3oz.png"
+                  alt="Usuarios trip advisor"
+                  width={200}
+                  className="mb-4  tarjetaAnimada"
+                />
+                <p className="text-light">Personas que nos recomiendan</p>
+              </div>
+            </Col>
+            {/* Columna de cards */}
+            <Col sm={12} md={7} className="row px-0">
+              <h3 className="py-3 d-md-none text-light">Principales Reseñas</h3>
+              <Col sm={12} md={6} className="mb-3 px-0 px-md-3">
+                <Card className="rounded-4  py-1 tarjetaAnimada h-100 ">
+                  <Card.Body>
+                    <HandPlatter size={35} className="color-arena my-3" />
+                    <Card.Title className="fw-bold fs-6">
+                      Excelentes restaurantes.
+                    </Card.Title>
+                    <Card.Text className="text-secondary">
+                      Nuestros clientes señalaron que aman nuestros
+                      restaurantes.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
               </Col>
-              {/* Columna de cards */}
-              <Col sm={12} md={7} className="row">
-                <Col sm={12} md={6} className="mb-3">
-                  <Card className="rounded-4  py-1 tarjetaAnimada h-100">
-                    <Card.Body>
-                      <HandPlatter size={35} className="color-arena my-3" />
-                      <Card.Title className="fw-bold fs-6">
-                        Excelentes restaurantes.
-                      </Card.Title>
-                      <Card.Text className="text-secondary">
-                        Nuestros clientes señalaron que aman nuestros
-                        restaurantes.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col sm={12} md={6} className="mb-3">
-                  <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
-                    <Card.Body>
-                      <HeartHandshake size={35} className="color-arena my-3" />
-                      <Card.Title className="fw-bold fs-6">
-                        Mejores SPA's.
-                      </Card.Title>
-                      <Card.Text className="text-secondary">
-                        Nuestros spa's son los más elegidos.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col sm={12} md={6} className="mt-3">
-                  <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
-                    <Card.Body>
-                      <Gem size={35} className="color-arena my-3" />
-                      <Card.Title className="fw-bold fs-6">
-                        Las mejores habitaciones.
-                      </Card.Title>
-                      <Card.Text className="text-secondary">
-                        Lujosas, cómodas y con una vista perfecta al mar.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col sm={12} md={6} className="mt-3">
-                  <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
-                    <Card.Body>
-                      <Laugh size={35} className="color-arena my-3" />
-                      <Card.Title className="fw-bold fs-6">
-                        Servicio increíble.
-                      </Card.Title>
-                      <Card.Text className="text-secondary">
-                        Atención unica y dedicada para cada visitante.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
+              <Col sm={12} md={6} className=" mb-md-3 px-0 px-md-3">
+                <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
+                  <Card.Body>
+                    <HeartHandshake size={35} className="color-arena my-3" />
+                    <Card.Title className="fw-bold fs-6">
+                      Mejores SPA's.
+                    </Card.Title>
+                    <Card.Text className="text-secondary">
+                      Nuestros spa's son los más elegidos en toda Riviera Maya.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
               </Col>
-            </Row>
-          </div>
+              <Col sm={12} md={6} className="mt-3 px-0 px-md-3">
+                <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
+                  <Card.Body>
+                    <Gem size={35} className="color-arena my-3" />
+                    <Card.Title className="fw-bold fs-6">
+                      Las mejores habitaciones.
+                    </Card.Title>
+                    <Card.Text className="text-secondary">
+                      Lujosas, cómodas y con una vista perfecta al mar.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col sm={12} md={6} className="mt-3 px-0 px-md-3">
+                <Card className="rounded-4  py-1 tarjetaAnimada  h-100">
+                  <Card.Body>
+                    <Laugh size={35} className="color-arena my-3" />
+                    <Card.Title className="fw-bold fs-6">
+                      Servicio increíble.
+                    </Card.Title>
+                    <Card.Text className="text-secondary">
+                      Atención unica y dedicada para cada visitante.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Col>
+          </Row>
         </div>
       </article>
     </section>
