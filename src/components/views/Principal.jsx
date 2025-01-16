@@ -1,6 +1,6 @@
 import "./styles/Principal.css";
 import { Link } from "react-router-dom";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Container } from "react-bootstrap";
 import {
   School,
   TreePalm,
@@ -24,7 +24,7 @@ const Principal = () => {
           <img
             src="https://res.cloudinary.com/dylansdev/image/upload/v1736892619/landing-1_ed96sh.jpg"
             alt="Foto del Lobby del hotel"
-            className="w-100 h-100 object-fit-cover position-absolute top-0 start-0 imgHeroSection"
+            className="w-100 h-100 object-fit-cover position-absolute top-0 start-0 imgPrincipalHeroSection"
           />
           <div className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-3 mx-3 ps-lg-5 ms-lg-5 text-poppins pb-5 pb-md-0">
             <p className="text-light fw-medium">Bienvenidos a</p>
@@ -54,7 +54,12 @@ const Principal = () => {
       <article className="d-flex min-vh-100 container-fluid px-4 px-lg-5">
         <div className="row align-items-center  px-lg-2">
           <div className="col-12 col-md-6 px-4 px-lg-5 my-5 my-lg-0 text-poppins">
-            <p className="color-arena fw-medium">---- Sobre Nosotros ----</p>
+            <p className="color-arena fw-medium d-none d-md-block">
+              ---- Sobre Nosotros ----
+            </p>
+            <p className="color-arena fw-medium d-md-none">
+              - Sobre Nosotros -
+            </p>
             <h2 className="mb-4 fw-bold">
               Bienvenidos a <br className="d-block d-md-none" />{" "}
               <span className="color-arena">OASIS HOTEL</span>
@@ -318,6 +323,98 @@ const Principal = () => {
             </Col>
           </Row>
         </div>
+      </article>
+
+      {/* Quinta Pantalla: Habitaciones */}
+      <article className="text-poppins d-flex flex-column mt-2 mb-5">
+        <div className="my-4">
+          <p className="text-center text-secondary m-0">
+            - Nuestras Habitaciones -
+          </p>
+          <h2 className="text-center ">
+            Mejores <span className="color-arena">elecciones</span>
+          </h2>
+        </div>
+
+        {/* Galeria de habitaciones */}
+        <Container className="text-center containerPrincipalHabitaciones px-4 px-md-0">
+          <Row className="justify-content-center">
+            {/* Columna dos fotos */}
+            <Col
+              sm={12}
+              md={3}
+              className="d-flex flex-column justify-content-between"
+            >
+              <span className="imgPHabitaciones my-3 my-md-0">
+                <div>
+                  <img
+                    src="https://res.cloudinary.com/dylansdev/image/upload/c_crop,w_216,h_177.3/v1736985377/Superior_oire21.webp"
+                    alt="Interior habitación superior"
+                    className="img-fluid rounded-4"
+                  />
+                </div>
+                <p className="fs-6 text-secondary py-2 m-0">Disponible</p>{" "}
+                <h4 className="fs-6 p-0 mb-3+40">Habitación Superior</h4>
+              </span>
+              <span className="imgPHabitaciones my-3 my-md-0">
+                <div>
+                  <img
+                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Deluxe_fwh0g3.webp"
+                    alt="Interior habitación deluxe"
+                    className="img-fluid rounded-4"
+                  />
+                </div>
+                <p className="fs-6 text-secondary py-2 m-0">Disponible</p>{" "}
+                <h4 className="fs-6 p-0 m-0">Habitación Deluxe</h4>
+              </span>
+            </Col>
+            {/* Columna Suite Presidencial */}
+            <Col
+              sm={12}
+              md={4}
+              className="d-flex flex-column justify-content-center imgPHabitaciones my-3 my-md-0"
+            >
+              <div>
+                <img
+                  src="https://res.cloudinary.com/dylansdev/image/upload/v1736985764/SuitePresidencial_ouexsb.jpg"
+                  alt="Exterior suite presidencial"
+                  className="rounded-4 imgPMedioHabitaciones "
+                />
+              </div>
+              <p className="fs-6 text-secondary py-2 m-0">Disponible</p>{" "}
+              <h4 className="fs-6 p-0 m-0">Habitación Superior</h4>
+            </Col>
+            {/* Columna dos fotos */}
+            <Col
+              sm={12}
+              md={3}
+              className="d-flex flex-column justify-content-between"
+            >
+              <span className="imgPHabitaciones my-3 my-md-0">
+                <div>
+                  <img
+                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Ejecutiva_hfzvaa.webp"
+                    alt="Interior suite ejecutiva"
+                    className="img-fluid rounded-4"
+                  />
+                </div>
+                <p className="fs-6 text-secondary py-2 m-0">Disponible</p>{" "}
+                <h4 className="fs-6 p-0 mb-3+40">Suite Ejecutiva</h4>
+              </span>
+              <span className="imgPHabitaciones my-3 my-md-0">
+                <div>
+                  <img
+                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Junior_fzaolx.webp"
+                    alt="Interior suite junior"
+                    className="img-fluid rounded-4"
+                  />
+                </div>
+                <p className="fs-6 text-secondary py-2 m-0">Disponible</p>{" "}
+                <h4 className="fs-6 p-0 m-0">Suite Junior</h4>
+              </span>
+            </Col>
+          </Row>
+        </Container>
       </article>
     </section>
   );

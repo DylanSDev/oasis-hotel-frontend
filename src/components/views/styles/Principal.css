@@ -1,4 +1,4 @@
-.imgHeroSection {
+.imgPrincipalHeroSection {
   filter: brightness(0.55);
 }
 
@@ -48,4 +48,14 @@
 .estrellas:hover svg {
   fill: #34e0a1; /* Aplica el gradiente al pasar el mouse */
   transform: scale(1.09);
+}
+
+/* Habitaciones */
+.imgPMedioHabitaciones {
+  width: 100%;
+  object-fit: cover;
+}
+
+.imgPHabitaciones:hover {
+  transform: scale(1.1);
 }
