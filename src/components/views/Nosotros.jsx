@@ -12,7 +12,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 const Nosotros = () => {
   return (
-    <section className="mainSection containerNosotros">
+    <section className="mainSection containerNosotros text-center text-md-start">
       {/* Primera Pantalla */}
       <article>
         <Carousel indicators={false} className="text-nunito">
@@ -89,12 +89,12 @@ const Nosotros = () => {
       </article>
 
       {/* Segunda Pantalla */}
-      <article className="container min-vh-86  d-flex align-items-center">
+      <article className="container min-vh-86 d-flex align-items-center">
         <NosotrosHistoria></NosotrosHistoria>
       </article>
 
       {/* Tercera Pantalla */}
-      <article className="container min-vh-86  d-flex flex-column text-poppins">
+      <article className="container min-vh-86 d-flex flex-column text-poppins">
         <p className="p-0 ps-3 my-1 text-muted">-Lo que nos hace únicos-</p>
         <h2 className="p-0 ps-3 mb-4">
           Nuestra <span className="color-arena">Filosofia</span>
@@ -139,6 +139,26 @@ const Nosotros = () => {
             </Col>
           </Row>
         </Container>
+      </article>
+
+      {/* Cuarta Pantalla */}
+      <article className="container-fluid min-vh-86 d-flex flex-column text-poppins containerNosotrosUbicacion">
+        <div className="container py-5">
+          <div>
+            <h2 className="my-4 py-2 text-light">
+              Donde nos <span className="color-arena">encontramos</span>
+            </h2>
+          </div>
+
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3732.672188783666!2d-87.0294142!3d20.6829115!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fef5d24ee257%3A0xd4d3962b28fbee68!2sBanyan%20Tree%20Mayakoba!5e0!3m2!1ses-419!2sar!4v1737054511165!5m2!1ses-419!2sar"
+              width="100%"
+              height="400"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
       </article>
     </section>
   );

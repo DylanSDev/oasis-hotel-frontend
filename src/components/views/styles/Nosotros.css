@@ -7,7 +7,13 @@
   filter: brightness(0.45);
 }
 
-/* Media para que el fondo de la pagina solo aparezca en dispositivos medianos y grandes */
+@media screen and (max-width: 835px) {
+  .imgSliderNosotros {
+    min-height: 89vh;
+    max-height: 89vh;
+  }
+}
+
 .containerNosotros {
   background-color: rgba(245, 236, 225, 0.21);
 }
@@ -18,4 +24,9 @@
   background-size: cover; /* Ajusta el SVG al tamaño de la pantalla */
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/*Ubicacion */
+.containerNosotrosUbicacion {
+  background-image: url("https://res.cloudinary.com/dylansdev/image/upload/v1737053778/Ubicaci%C3%B3n_vnqkiu.png");
 }
