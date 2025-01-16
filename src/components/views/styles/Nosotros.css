@@ -1,0 +1,7 @@
+.imgSliderNosotros {
+  min-height: 400px;
+  max-height: 86vh;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+}
