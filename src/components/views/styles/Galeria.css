@@ -1,0 +1,10 @@
+.containerGaleria {
+  background-image: url("../../../assets/Palmeras-Fondo-2.svg");
+  background-size: cover; /* Ajusta el SVG al tamaño de la pantalla */
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.bgTexto {
+  background-color: #fcf9f7;
+}
