@@ -1,8 +1,14 @@
+import "./styles/Nosotros.css";
 import Carousel from "react-bootstrap/Carousel";
 import LogoOasis from "../commons/LogoOasis.jsx";
-import "./styles/Nosotros.css";
-import { BsStarFill } from "react-icons/bs";
+import {
+  BsStarFill,
+  BsBullseye,
+  BsRocketTakeoff,
+  BsTrophy,
+} from "react-icons/bs";
 import NosotrosHistoria from "../extras/NosotrosHistoria.jsx";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 const Nosotros = () => {
   return (
@@ -85,6 +91,54 @@ const Nosotros = () => {
       {/* Segunda Pantalla */}
       <article className="container min-vh-86  d-flex align-items-center">
         <NosotrosHistoria></NosotrosHistoria>
+      </article>
+
+      {/* Tercera Pantalla */}
+      <article className="container min-vh-86  d-flex flex-column text-poppins">
+        <p className="p-0 ps-3 my-1 text-muted">-Lo que nos hace únicos-</p>
+        <h2 className="p-0 ps-3 mb-4">
+          Nuestra <span className="color-arena">Filosofia</span>
+        </h2>
+        <Container>
+          <Row>
+            <Col md={6} className="px-md-3 mb-4">
+              <Card className="rounded-4  py-1 tarjetasNuestraFilosofia  h-100 text-center rounded-5">
+                <Card.Body>
+                  <BsBullseye size={35} className="color-arena my-3" />
+                  <Card.Title className="fw-bold fs-4">Misión</Card.Title>
+                  <Card.Text className="text-secondary px-5 mx-3">
+                    Brindar una experiencia única y personalizada a cada
+                    huésped.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={6} className="px-md-3 mb-4">
+              <Card className="rounded-4  py-1 tarjetasNuestraFilosofia   h-100 text-center rounded-5">
+                <Card.Body>
+                  <BsRocketTakeoff size={35} className="color-arena my-3" />
+                  <Card.Title className="fw-bold fs-4">Visión</Card.Title>
+                  <Card.Text className="text-secondary px-5 mx-3">
+                    Ser el hotel de lujo más exclusivo y reconocido de la
+                    Riviera Maya.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={12} className="px-md-3">
+              <Card className="rounded-4  py-1 tarjetasNuestraFilosofia   h-100 text-center rounded-5">
+                <Card.Body>
+                  <BsTrophy size={35} className="color-arena my-3 estrellas" />
+                  <Card.Title className="fw-bold fs-4">Valores</Card.Title>
+                  <Card.Text className="text-secondary px-l-5 mx-5 py-md-0 py-2">
+                    Hospitalidad, Excelencia, Sostenibilidad, Privacidad,
+                    Exclusividad, Calidez
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </article>
     </section>
   );
