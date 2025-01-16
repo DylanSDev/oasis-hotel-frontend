@@ -416,6 +416,26 @@ const Principal = () => {
           </Row>
         </Container>
       </article>
+
+      {/* Sexta Pantalla:  Llamado al acción*/}
+      <article className="container-fluid p-0 m-0 ">
+        <div className="card text-white border-0 text-poppins fondopCTA py-5">
+          <div className="d-flex flex-column justify-content-center text-center">
+            <p>TU EXPERIENCIA DE LUJO TE ESPERA</p>
+            <h3 className="card-title my-3">
+              Reserva tu habitación hoy y vive la experiencia Oasis Hotel
+            </h3>
+            <div className="my-3">
+              <Link
+                className="btn btn-primary bg-arena border-0 py-2 px-4 mt-2 fw-medium rounded-5 btnPrincipal"
+                to={"/habitaciones"}
+              >
+                Reservar Ahora
+              </Link>
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
   );
 };

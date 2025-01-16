@@ -1,5 +1,5 @@
 .imgPrincipalHeroSection {
-  filter: brightness(0.55);
+  filter: brightness(0.45);
 }
 
 /* Efectos para botones de la página principal */
@@ -34,8 +34,8 @@
 
 /* Efectos estrellas tripadvisor */
 .fondoTripAdvisor {
-  background-image: url(https://res.cloudinary.com/dylansdev/image/upload/v1736980550/trip-1_alkldr.png);
-  background-size: cover; /* Ajusta el SVG al tamaño de la pantalla */
+  background-image: url(https://res.cloudinary.com/dylansdev/image/upload/v1736994224/trip-1_o4f2b7.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -58,4 +58,12 @@
 
 .imgPHabitaciones:hover {
   transform: scale(1.1);
+}
+
+/* Llamado a la acción */
+.fondopCTA {
+  background-image: url(https://res.cloudinary.com/dylansdev/image/upload/v1736994212/CTA_klqy5i.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
