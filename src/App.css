@@ -39,6 +39,10 @@
   flex-grow: 1;
 }
 
+.min-vh-86 {
+  min-height: 86vh;
+}
+
 /* Estilos barra de desplazamiento */
 body::-webkit-scrollbar {
   width: 8px;
