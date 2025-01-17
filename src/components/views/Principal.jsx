@@ -382,7 +382,7 @@ const Principal = () => {
                 />
               </div>
               <p className="fs-6 text-secondary py-2 m-0">Disponible</p>{" "}
-              <h4 className="fs-6 p-0 m-0">Habitación Superior</h4>
+              <h4 className="fs-6 p-0 m-0">Habitación Suite Presidencial</h4>
             </Col>
             {/* Columna dos fotos */}
             <Col

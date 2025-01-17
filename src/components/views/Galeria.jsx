@@ -89,7 +89,7 @@ const Galeria = () => {
           <CarouselGaleria images={imgGastronomia}></CarouselGaleria>
         </div>
         <div className="d-flex flex-column justify-content-center align-items-center pb-5">
-          <h2 className="text-center text-poppins mt-5 mb-4">
+          <h2 className="text-center text-poppins mt-4 mb-4">
             El paisaje de <span className="color-arena"> Riviera Maya</span>
           </h2>
           <CarouselGaleria images={imgPaisajes}></CarouselGaleria>
