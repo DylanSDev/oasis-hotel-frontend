@@ -1,16 +1,49 @@
 import { useForm } from "react-hook-form";
 import { Phone, Mail } from "lucide-react";
+import Swal from "sweetalert2";
 
 const Contacto = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Aquí iría la lógica para enviar el formulario
+  const onSubmit = async (data) => {
+    // Mostrar el modal de confirmación
+    const result = await Swal.fire({
+      title: "¿Enviar mensaje?",
+      text: "Estaremos respondiendo lo antes posible.",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Sí, enviar",
+      cancelButtonText: "Cancelar",
+      customClass: {
+        popup: "rounded-5",
+        title: "color-arena", // Cambiar color del título
+        confirmButton: "btn btn-success rounded-3 py-2", // Cambiar color del botón de confirmar
+        cancelButton: "btn btn-danger rounded-3 py-2", // Cambiar color del botón de cancelar
+      },
+    });
+
+    if (result.isConfirmed) {
+      console.log("Datos enviados:", data); // Aquí iría la lógica para enviar el formulario
+
+      // Mostrar un mensaje de éxito
+      Swal.fire({
+        title: "¡Enviado!",
+        text: "Tu mensaje fue enviado con éxito.",
+        icon: "success",
+        customClass: {
+          popup: "rounded-5", // Bordes redondeados
+          confirmButton: "btn bg-arena py-2", // Cambia 'btn-primary' por el color de tu preferencia
+        },
+      });
+
+      // Limpiar el formulario
+      reset();
+    }
   };
 
   return (
