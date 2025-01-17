@@ -134,3 +134,10 @@ body::-webkit-scrollbar-thumb {
     color: transparent; /* Hace que el icono tome el color del degradado */
   }
 }
+
+/* Estilo para las cards del catalogo de habitaciones */
+.boton-card-habitaciones:hover {
+  background: linear-gradient(45deg, #e8c093, #89bbad, #17598c);
+  border-color: 0px;
+  color: white !important;
+}

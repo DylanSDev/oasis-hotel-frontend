@@ -393,7 +393,7 @@ const Principal = () => {
               <span className="imgPHabitaciones my-3 my-md-0">
                 <div>
                   <img
-                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Ejecutiva_hfzvaa.webp"
+                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Junior_fzaolx.webp"
                     alt="Interior suite ejecutiva"
                     className="img-fluid rounded-4"
                   />
@@ -404,7 +404,7 @@ const Principal = () => {
               <span className="imgPHabitaciones my-3 my-md-0">
                 <div>
                   <img
-                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Junior_fzaolx.webp"
+                    src="https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Ejecutiva_hfzvaa.webp"
                     alt="Interior suite junior"
                     className="img-fluid rounded-4"
                   />
