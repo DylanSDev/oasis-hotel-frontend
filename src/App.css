@@ -43,6 +43,12 @@
   min-height: 86vh;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .min-vh-md-60 {
+    min-height: 60vh !important;
+  }
+}
+
 /* Estilos barra de desplazamiento */
 body::-webkit-scrollbar {
   width: 8px;

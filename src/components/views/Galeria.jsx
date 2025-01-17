@@ -1,11 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "./styles/Galeria.css";
+import CarouselGaleria from "../extras/CarouselGaleria";
 
 const Galeria = () => {
   return (
     <section className="mainSection containerGaleria">
       `{/* Primera Pantalla */}
-      <article className="container px-2 text-center text-md-start min-vh-86 d-flex align-items-center px-4 px-md-0">
+      <article className="container min-vh-86 min-vh-md-60 px-2 text-center text-md-start min-vh-86 d-flex align-items-center px-4 px-md-0">
         <Container>
           <Row>
             {/* Primera*/}
@@ -71,8 +72,66 @@ const Galeria = () => {
           </Row>
         </Container>
       </article>
+      {/* Segunda Pantalla */}
+      <article className="container min-vh-86 min-vh-md-60 px-2 text-center text-md-start min-vh-86 align-items-center px-4 px-md-0 my-5 my-md-0">
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <h2 className="text-center text-poppins mb-4">
+            Nuestras <span className="color-arena">aventuras</span>
+          </h2>
+          <CarouselGaleria images={imgAventuras}></CarouselGaleria>
+        </div>
+
+        <div className="d-flex flex-column justify-content-center align-items-center pb-5">
+          <h2 className="text-center text-poppins mt-5 mb-4">
+            Nuestra gastronomia{" "}
+            <span className="color-arena"> de primer nivel</span>
+          </h2>
+          <CarouselGaleria images={imgGastronomia}></CarouselGaleria>
+        </div>
+        <div className="d-flex flex-column justify-content-center align-items-center pb-5">
+          <h2 className="text-center text-poppins mt-5 mb-4">
+            El paisaje de <span className="color-arena"> Riviera Maya</span>
+          </h2>
+          <CarouselGaleria images={imgPaisajes}></CarouselGaleria>
+        </div>
+      </article>
     </section>
   );
 };
 
+const imgAventuras = [
+  "https://cdn.sanity.io/images/atvntylo/production/5182ccf371b9bc6eff9c285da20e39c220c9719d-5611x3741.jpg?w=3840&q=65&fit=clip&auto=format",
+  "https://cdn.sanity.io/images/atvntylo/production/4c86c2c0efef04d3cf77de7cdc91b631fba21de0-1080x1630.webp?w=384&q=70&fit=clip&auto=format",
+  "https://cdn.sanity.io/images/atvntylo/production/d78e17fc5cb1ae9956ca94933a303b25d8a861ff-1080x1630.webp?w=384&q=70&fit=clip&auto=format",
+  "https://cdn.sanity.io/images/atvntylo/production/24048272316369f8e1842425d4e0cab296f3c6b3-1080x1630.webp?w=384&q=70&fit=clip&auto=format",
+  "https://cdn.sanity.io/images/atvntylo/production/6ac2dc6c57c7ab544efe779595e5a7d5bd28ed08-1080x1630.webp?w=384&q=70&fit=clip&auto=format",
+  "https://cdn.sanity.io/images/atvntylo/production/775b73e34bfe6ea5006f5ec033b0bf286307a8a4-1080x1630.webp?w=640&q=70&fit=clip&auto=format",
+  "https://cdn.sanity.io/images/atvntylo/production/9d175f694cbd4a908cf2c76c80ad6f06b6d90a6f-1080x1630.webp?w=384&q=70&fit=clip&auto=format",
+  "https://cdn.sanity.io/images/atvntylo/production/763b5fe8802c614d0f8c3f949916265aa6dff5fb-1080x1630.webp?w=384&q=70&fit=clip&auto=format",
+];
+
+const imgGastronomia = [
+  "https://images.pexels.com/photos/4253320/pexels-photo-4253320.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/24877173/pexels-photo-24877173/free-photo-of-comida-plato-vegetales-verduras.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/11213749/pexels-photo-11213749.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/4253318/pexels-photo-4253318.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/5490142/pexels-photo-5490142.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/4946442/pexels-photo-4946442.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/28435314/pexels-photo-28435314/free-photo-of-platos-gourmet-de-alta-cocina-en-presentacion-plana.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/11118539/pexels-photo-11118539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/4916142/pexels-photo-4916142.jpeg?auto=compress&cs=tinysrgb&w=400",
+];
+
+const imgPaisajes = [
+  "https://images.pexels.com/photos/3822155/pexels-photo-3822155.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/13878151/pexels-photo-13878151.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/3822133/pexels-photo-3822133.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/16741473/pexels-photo-16741473/free-photo-of-mar-playa-arena-vista-superior.jpeg?auto=compress&cs=tinysrgb&w=400",
+
+  "https://images.pexels.com/photos/16147203/pexels-photo-16147203/free-photo-of-mar-ciudad-playa-edificios.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/29174332/pexels-photo-29174332/free-photo-of-representacion-tradicional-de-guerreros-mayas-en-playa-tropical.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/11434418/pexels-photo-11434418.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/18021507/pexels-photo-18021507/free-photo-of-mar-cielo-puesta-de-sol-playa.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "https://images.pexels.com/photos/20822534/pexels-photo-20822534/free-photo-of-mar-amanecer-paisaje-naturaleza.jpeg?auto=compress&cs=tinysrgb&w=400",
+];
 export default Galeria;

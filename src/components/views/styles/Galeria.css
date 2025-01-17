@@ -4,3 +4,48 @@
   background-position: center;
   background-repeat: repeat;
 }
+
+/* Estilos para el carrousel */
+.carousel-wrapper-galeria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-container-galeria {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.carousel-image-galeria {
+  width: 225px;
+  border-radius: 15px;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-button-galeria {
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 2rem;
+  /* cursor: pointer; */
+  padding: 10px;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-image-galeria {
+    width: 223px; /* Ajusta el tamaño para tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-image-galeria {
+    width: 270px; /* Una imagen a la vez en teléfonos */
+  }
+}
