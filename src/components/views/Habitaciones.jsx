@@ -20,6 +20,7 @@ export default function RoomSection() {
     },
     {
       id: 2,
+      roomRoute: "deluxe",
       image:
         "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Deluxe_fwh0g3.webp",
       title: "Habitación Deluxe",
@@ -34,6 +35,7 @@ export default function RoomSection() {
     },
     {
       id: 3,
+      roomRoute: "presidencial",
       image:
         "https://res.cloudinary.com/dylansdev/image/upload/v1736985764/SuitePresidencial_ouexsb.jpg",
       title: "Suite Presidencial",
@@ -48,6 +50,7 @@ export default function RoomSection() {
     },
     {
       id: 4,
+      roomRoute: "junior",
       image:
         "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Ejecutiva_hfzvaa.webp",
       title: "Suite Junior",
@@ -62,6 +65,7 @@ export default function RoomSection() {
     },
     {
       id: 5,
+      roomRoute: "ejecutiva",
       image:
         "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Junior_fzaolx.webp",
       title: "Suite Ejecutiva",
@@ -82,7 +86,7 @@ export default function RoomSection() {
         <div className="col-md-6">
           <img
             src={room.image}
-            alt={room.title}
+            alt={`${room.title} - Oasis Hotel`}
             className="img-fluid rounded-4"
             style={{ objectFit: "cover", height: "100%" }}
           />
@@ -120,7 +124,7 @@ export default function RoomSection() {
               Explorar
             </Link>
             <Link
-              to={`/reservar`}
+              to={`/reservar/${room.roomRoute}`}
               className="btn bg-arena boton-card-habitaciones w-100 fw-bold"
             >
               Reservar Ahora
