@@ -47,7 +47,7 @@ const Contacto = () => {
 
   return (
     <section className="mainSection containerGaleria">
-      <article className="min-vh-86 container px-4 px-0 py-2 text-nunito">
+      <article className="min-vh-86 container px-4 px-0 py-4 text-nunito">
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-center">
             <h1 className="color-arena mb-3 text-poppins fs-2 fw-medium">

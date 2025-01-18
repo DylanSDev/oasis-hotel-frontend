@@ -1,0 +1,29 @@
+.room-detail .hero-section-room-detail {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section-room-detail {
+  background-image: url("https://res.cloudinary.com/dylansdev/image/upload/v1737170186/Fondo_elsh9f.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+}
+
+.title-room-detail {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.img-slider-room-detail {
+  min-height: 400px;
+  max-height: 86vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .img-slider-room-detail {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+}

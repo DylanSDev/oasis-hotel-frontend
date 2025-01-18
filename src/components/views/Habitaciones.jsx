@@ -137,11 +137,11 @@ export default function RoomSection() {
 
   return (
     <section className="mainSection containerGaleria">
-      <article className="container py-4">
-        <h2 className="mb-2 text-poppins">
+      <article className="container py-5">
+        <h2 className="mb-2 text-poppins px-4 px-md-0">
           Lo mejor de la <span className="color-arena">Riviera Maya</span>
         </h2>
-        <p className="text-poppins">
+        <p className="text-poppins px-4 px-md-0">
           Descubre el lujo y la comodidad en Oasis Hotel.
         </p>
         <div className="row g-4 justify-content-center">
