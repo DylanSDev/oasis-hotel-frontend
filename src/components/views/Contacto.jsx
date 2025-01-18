@@ -21,9 +21,8 @@ const Contacto = () => {
       cancelButtonText: "Cancelar",
       customClass: {
         popup: "rounded-5",
-        title: "color-arena", // Cambiar color del título
-        confirmButton: "btn btn-success rounded-3 py-2", // Cambiar color del botón de confirmar
-        cancelButton: "btn btn-danger rounded-3 py-2", // Cambiar color del botón de cancelar
+        title: "color-arena",
+        confirmButton: "btn btn-success rounded-3 py-2",
       },
     });
 
@@ -36,8 +35,8 @@ const Contacto = () => {
         text: "Tu mensaje fue enviado con éxito.",
         icon: "success",
         customClass: {
-          popup: "rounded-5", // Bordes redondeados
-          confirmButton: "btn bg-arena py-2", // Cambia 'btn-primary' por el color de tu preferencia
+          popup: "rounded-5",
+          confirmButton: "btn bg-arena py-2",
         },
       });
 
@@ -47,7 +46,7 @@ const Contacto = () => {
   };
 
   return (
-    <section className="mainSection">
+    <section className="mainSection containerGaleria">
       <article className="min-vh-86 container px-4 px-0 py-2 text-nunito">
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-center">

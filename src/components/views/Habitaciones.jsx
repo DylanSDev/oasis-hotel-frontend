@@ -50,21 +50,6 @@ export default function RoomSection() {
     },
     {
       id: 4,
-      roomRoute: "junior",
-      image:
-        "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Ejecutiva_hfzvaa.webp",
-      title: "Suite Junior",
-      description:
-        "Una inigualable vista al mar Caribe  le ofrece esta suite ubicada en el segundo nivel,  invitándole a deleitarse con el sonido de las olas y la brisa del mar para comenzar sus días en nuestro hotel.",
-      details: {
-        people: "2 personas",
-        bed: "Cama king size",
-        size: "156 m2 / 1,675 ft2",
-        view: "Vista al mar",
-      },
-    },
-    {
-      id: 5,
       roomRoute: "ejecutiva",
       image:
         "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Junior_fzaolx.webp",
@@ -75,6 +60,21 @@ export default function RoomSection() {
         people: "2 personas",
         bed: "Cama king size",
         size: "162 m2 / 1,740 ft2",
+        view: "Vista al mar",
+      },
+    },
+    {
+      id: 5,
+      roomRoute: "junior",
+      image:
+        "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Ejecutiva_hfzvaa.webp",
+      title: "Suite Junior",
+      description:
+        "Una inigualable vista al mar Caribe  le ofrece esta suite ubicada en el segundo nivel,  invitándole a deleitarse con el sonido de las olas y la brisa del mar para comenzar sus días en nuestro hotel.",
+      details: {
+        people: "2 personas",
+        bed: "Cama king size",
+        size: "156 m2 / 1,675 ft2",
         view: "Vista al mar",
       },
     },
@@ -139,13 +139,12 @@ export default function RoomSection() {
     <section className="mainSection containerGaleria">
       <article className="container py-4">
         <h2 className="mb-2 text-poppins">
-          {" "}
           Lo mejor de la <span className="color-arena">Riviera Maya</span>
         </h2>
         <p className="text-poppins">
           Descubre el lujo y la comodidad en Oasis Hotel.
         </p>
-        <div className="row g-4">
+        <div className="row g-4 justify-content-center">
           {rooms.map((room) => (
             <div key={room.id} className="col-12 col-lg-6">
               <RoomCard room={room} />

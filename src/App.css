@@ -113,12 +113,12 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   display: inline-block;
   transition: transform 0.3s ease, color 0.6s ease; /* transición suave */
-  color: #393632; /* color por defecto */
+  color: #393632;
 }
 
 /* Efecto cuando se pasa el mouse sobre el contenedor linkFooter */
 .linkFooter:hover {
-  transform: scale(1.2); /* Escala el icono */
+  transform: scale(1.2);
   animation: gradient-fill 0.6s forwards; /* Animación del degradado */
 }
 
