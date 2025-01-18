@@ -1,11 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { FaWifi, FaTv, FaBed, FaUser, FaSun, FaWater } from "react-icons/fa";
 import { BsStarFill, BsEggFried } from "react-icons/bs";
 import "./styles/DetalleHabitacion.css";
 import { Row, Col, Carousel } from "react-bootstrap";
+import { roomData } from "./roomData";
 
 export default function DetalleHabitacion() {
+  const { roomType } = useParams();
+  const room = roomData[roomType] || roomData.superior; // Ponemos a superior como default si no se encuentra el tipo
+
   return (
     <section className="room-detail mainSection">
       {/* Sección Hero */}
@@ -19,8 +23,8 @@ export default function DetalleHabitacion() {
               </span>
             ))}
           </div>
-          <h1 className="mb-2 fs-2">Habitación</h1>
-          <h2 className="display-4 fw-medium">Superior</h2>
+          <h1 className="mb-2 fs-2">{room.category}</h1>
+          <h2 className="display-4 fw-medium">{room.name}</h2>
         </div>
       </article>
 
@@ -32,30 +36,21 @@ export default function DetalleHabitacion() {
               - Lo mejor de Riviera Maya -
             </p>
             <h2 className="display-5 mb-4 color-arena fw-medium">
-              Habitación Superior
+              {room.category} {room.name}
             </h2>
-            <p className="mb-1 text-justify">
-              Con vista frontal al mar, esta suite cuenta con terraza privada,
-              sala de estar, piscina climatizada y acceso directo a la playa de
-              color blanca.
-            </p>
-            <p className="mb-3 text-justify">
-              Con vista frontal al mar, esta suite cuenta con terraza privada,
-              sala de estar, piscina climatizada y acceso directo a la playa de
-              color blanca.
-            </p>
+            <p className="mb-3 text-justify">{room.description}</p>
             <Row>
               <Col sm={12} md={6}>
                 <Link
-                  to="/reservar"
-                  className="btn bg-arena  text-white py-2 w-100 mb-3"
+                  to={`/reservar/${roomType}`}
+                  className="btn bg-arena text-white py-2 w-100 mb-3"
                 >
                   Reservar Ahora
                 </Link>
               </Col>
               <Col sm={12} md={6}>
                 <p className="py-2 w-100 text-center bg-secondary text-light rounded-2">
-                  Tarifa: U$D 1.050
+                  Tarifa: U$D {room.price}
                 </p>
               </Col>
             </Row>
@@ -63,8 +58,8 @@ export default function DetalleHabitacion() {
           <div className="col-lg-6 d-flex align-items-center mt-3">
             <div>
               <img
-                src="https://res.cloudinary.com/dylansdev/image/upload/v1737170232/Superior_dpdxpv.webp"
-                alt="Habitación Superior"
+                src={room.image || "/placeholder.svg"}
+                alt={`Habitación ${room.name}`}
                 className="img-fluid rounded shadow"
               />
             </div>
@@ -79,11 +74,11 @@ export default function DetalleHabitacion() {
           <div className="row g-4 text-center text-muted">
             <div className="col-6 col-md-2">
               <FaUser className="fs-3 mb-2" />
-              <p>2 personas</p>
+              <p>{room.capacity} personas</p>
             </div>
             <div className="col-6 col-md-2">
               <FaBed className="fs-3 mb-2" />
-              <p>Cama King</p>
+              <p>{room.bedType}</p>
             </div>
             <div className="col-6 col-md-2">
               <FaWifi className="fs-3 mb-2 " />
@@ -108,27 +103,15 @@ export default function DetalleHabitacion() {
       {/* Sección de slider */}
       <article className="container p-0 mb-3">
         <Carousel indicators={false} className="text-nunito">
-          <Carousel.Item>
-            <img
-              className="d-block w-100 img-slider-room-detail"
-              src="https://res.cloudinary.com/dylansdev/image/upload/v1737038310/Slider-1_ubqqhg.jpg"
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 img-slider-room-detail"
-              src="https://images.pexels.com/photos/11434425/pexels-photo-11434425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 img-slider-room-detail"
-              src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Third slide"
-            />
-          </Carousel.Item>
+          {room.sliderImages.map((image, index) => (
+            <Carousel.Item key={index}>
+              <img
+                className="d-block w-100 img-slider-room-detail"
+                src={image || "/placeholder.svg"}
+                alt={`Slide ${index + 1}`}
+              />
+            </Carousel.Item>
+          ))}
         </Carousel>
       </article>
     </section>
