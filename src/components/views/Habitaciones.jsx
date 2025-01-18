@@ -14,7 +14,7 @@ export default function RoomSection() {
       details: {
         people: "2 personas",
         bed: "Cama king size",
-        size: "222 m2 / 2,385 ft2",
+        size: "230 m2 / 2,385 ft2",
         view: "Vista al mar",
       },
     },
@@ -24,24 +24,66 @@ export default function RoomSection() {
         "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Deluxe_fwh0g3.webp",
       title: "Habitación Deluxe",
       description:
-        "Elegante suite con vistas panorámicas al océano, jacuzzi privado y terraza amueblada para disfrutar del atardecer.",
+        "Sumérjase en la asombrosa puesta de sol desde su exclusiva villa con piscina. Cuenta con un diseño de dos pisos y una atmósfera de infusión orgánica.",
       details: {
-        people: "3 personas",
-        bed: "Cama king size + sofá cama",
-        size: "275 m2 / 2,960 ft2",
-        view: "Vista panorámica al mar",
+        people: "2 personas",
+        bed: "Cama king size",
+        size: "222 m2 / 2,385 ft2",
+        view: "Vista al lago",
+      },
+    },
+    {
+      id: 3,
+      image:
+        "https://res.cloudinary.com/dylansdev/image/upload/v1736985764/SuitePresidencial_ouexsb.jpg",
+      title: "Suite Presidencial",
+      description:
+        "Nuestro oasis ofrece una indescriptible vista a la laguna color jade, una alberca templada y un balcón privado donde puede solicitar un tratamiento de spa exclusivo para revitalizar sus sentidos.",
+      details: {
+        people: "2 personas",
+        bed: "Cama king size",
+        size: "322 m2 / 3,460 ft2",
+        view: "Vista al lago",
+      },
+    },
+    {
+      id: 4,
+      image:
+        "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Ejecutiva_hfzvaa.webp",
+      title: "Suite Junior",
+      description:
+        "Una inigualable vista al mar Caribe  le ofrece esta suite ubicada en el segundo nivel,  invitándole a deleitarse con el sonido de las olas y la brisa del mar para comenzar sus días en nuestro hotel.",
+      details: {
+        people: "2 personas",
+        bed: "Cama king size",
+        size: "156 m2 / 1,675 ft2",
+        view: "Vista al mar",
+      },
+    },
+    {
+      id: 5,
+      image:
+        "https://res.cloudinary.com/dylansdev/image/upload/v1736990748/Junior_fzaolx.webp",
+      title: "Suite Ejecutiva",
+      description:
+        "Disfrute de una vista panorámica ilimitada hacia el mar Caribe desde la privacidad de su suite ubicada en planta alta, cuenta con sala de estar, piscina privada climatizada al aire libre, entre otros.",
+      details: {
+        people: "2 personas",
+        bed: "Cama king size",
+        size: "162 m2 / 1,740 ft2",
+        view: "Vista al mar",
       },
     },
   ];
 
   const RoomCard = ({ room }) => (
-    <div className="card p-4 h-100 shadow-sm rounded-5">
+    <div className="card p-4 h-100 shadow-sm rounded-4">
       <div className="row g-0 h-100">
         <div className="col-md-6">
           <img
             src={room.image}
             alt={room.title}
-            className="img-fluid rounded-5"
+            className="img-fluid rounded-4"
             style={{ objectFit: "cover", height: "100%" }}
           />
         </div>
@@ -94,7 +136,7 @@ export default function RoomSection() {
       <article className="container py-4">
         <h2 className="mb-2 text-poppins">
           {" "}
-          Lo mejor de <span className="color-arena">Riviera Maya</span>
+          Lo mejor de la <span className="color-arena">Riviera Maya</span>
         </h2>
         <p className="text-poppins">
           Descubre el lujo y la comodidad en Oasis Hotel.
