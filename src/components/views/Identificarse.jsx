@@ -33,17 +33,23 @@ const Identificarse = () => {
           <Components.SignUpContainer $signingIn={isSigningIn}>
             <Components.Form
               onSubmit={handleSubmit(onSubmit)}
-              className="text-poppins"
+              className="text-poppins fw-light"
             >
               <Components.Title className="mb-3">Crear Cuenta</Components.Title>
 
               {/* Nombre Completo */}
-              <div className="form-group w-100 fw-normal">
+              <div className="form-group w-100  mb-3">
                 <label htmlFor="username">Nombre Completo</label>
                 <Controller
                   name="username"
                   control={control}
-                  rules={{ required: "El nombre es obligatorio" }}
+                  rules={{
+                    required: "El nombre es obligatorio",
+                    minLength: {
+                      value: 5,
+                      message: "El nombre debe tener al menos 5 caracteres",
+                    },
+                  }}
                   render={({ field }) => (
                     <Components.Input
                       {...field}
@@ -52,11 +58,13 @@ const Identificarse = () => {
                     />
                   )}
                 />
-                {errors.username && <span>{errors.username.message}</span>}
+                {errors.username && (
+                  <span className="text-danger">{errors.username.message}</span>
+                )}
               </div>
 
               {/* Email */}
-              <div className="form-group w-100">
+              <div className="form-group w-100  mb-3">
                 <label htmlFor="email">Correo Electrónico</label>
                 <Controller
                   name="email"
@@ -76,11 +84,13 @@ const Identificarse = () => {
                     />
                   )}
                 />
-                {errors.email && <span>{errors.email.message}</span>}
+                {errors.email && (
+                  <span className="text-danger">{errors.email.message}</span>
+                )}
               </div>
 
-              {/* Phone */}
-              <div className="form-group w-100">
+              {/* Teléfono */}
+              <div className="form-group w-100  mb-3">
                 <label htmlFor="phone">Número de Teléfono</label>
                 <Controller
                   name="phone"
@@ -96,21 +106,30 @@ const Identificarse = () => {
                     <Components.Input
                       {...field}
                       type="tel"
-                      placeholder="+54222555"
+                      placeholder="Ej: 54222555"
                       className="w-90"
                     />
                   )}
                 />
-                {errors.phone && <span>{errors.phone.message}</span>}
+                {errors.phone && (
+                  <span className="text-danger">{errors.phone.message}</span>
+                )}
               </div>
 
-              {/* Password */}
-              <div className="form-group w-100">
-                <label htmlFor="password">
-                  Contraseña
-                  <span className="text-muted">
-                    (6 caracteres, 1 mayuscula y miniscula)
-                  </span>
+              {/* Contraseña */}
+              <div className="form-group w-100 mb-3">
+                <label
+                  htmlFor="password"
+                  className="d-flex justify-content-between"
+                >
+                  Contraseña (6 caracteres)
+                  <button
+                    type="button"
+                    className="rounded-3 border-0"
+                    onClick={togglePasswordVisibility}
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
                 </label>
                 <Controller
                   name="password"
@@ -129,30 +148,40 @@ const Identificarse = () => {
                         type={showPassword ? "text" : "password"}
                         placeholder="Ingresa tu contraseña"
                       />
-                      <button
-                        type="button"
-                        className="password-toggle-btn"
-                        onClick={togglePasswordVisibility}
-                      >
-                        {showPassword ? <FaEyeSlash /> : <FaEye />}
-                      </button>
                     </div>
                   )}
                 />
-                {errors.password && <span>{errors.password.message}</span>}
+                {errors.password && (
+                  <span className="text-danger">{errors.password.message}</span>
+                )}
               </div>
 
-              {/* Terms and conditions */}
-              <div className="w-100 text-start">
-                <input
-                  className="form-check-input me-2"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
+              {/* Terminos y condiciones */}
+              <div className="w-100 text-start mb-3">
+                <Controller
+                  name="terms"
+                  control={control}
+                  rules={{ required: "Debes aceptar los términos de uso" }}
+                  render={({ field }) => (
+                    <div>
+                      <input
+                        {...field}
+                        className="form-check-input me-2 mb-2"
+                        type="checkbox"
+                        id="flexCheckDefault"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="flexCheckDefault"
+                      >
+                        Aceptas nuestros Términos de Uso.
+                      </label>
+                    </div>
+                  )}
                 />
-                <label className="form-check-label" htmlFor="flexCheckDefault">
-                  Aceptas nuestros Terminos de Uso.
-                </label>
+                {errors.terms && (
+                  <span className="text-danger">{errors.terms.message}</span>
+                )}
               </div>
 
               <Components.Button type="submit">
