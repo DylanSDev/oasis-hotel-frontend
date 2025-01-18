@@ -37,8 +37,7 @@ const Identificarse = () => {
             >
               <Components.Title className="mb-3">Crear Cuenta</Components.Title>
 
-              {/* Nombre Completo */}
-              <div className="form-group w-100  mb-3">
+              <div className="form-group w-100 mb-3">
                 <label htmlFor="username">Nombre Completo</label>
                 <Controller
                   name="username"
@@ -53,8 +52,10 @@ const Identificarse = () => {
                   render={({ field }) => (
                     <Components.Input
                       {...field}
+                      id="username"
                       type="text"
                       placeholder="Ej: Oasis Hotel"
+                      autoComplete="name"
                     />
                   )}
                 />
@@ -63,8 +64,7 @@ const Identificarse = () => {
                 )}
               </div>
 
-              {/* Email */}
-              <div className="form-group w-100  mb-3">
+              <div className="form-group w-100 mb-3">
                 <label htmlFor="email">Correo Electrónico</label>
                 <Controller
                   name="email"
@@ -79,8 +79,10 @@ const Identificarse = () => {
                   render={({ field }) => (
                     <Components.Input
                       {...field}
+                      id="email"
                       type="email"
                       placeholder="Ej: ejemplo@oasis.com"
+                      autoComplete="email"
                     />
                   )}
                 />
@@ -89,8 +91,7 @@ const Identificarse = () => {
                 )}
               </div>
 
-              {/* Teléfono */}
-              <div className="form-group w-100  mb-3">
+              <div className="form-group w-100 mb-3">
                 <label htmlFor="phone">Número de Teléfono</label>
                 <Controller
                   name="phone"
@@ -105,9 +106,11 @@ const Identificarse = () => {
                   render={({ field }) => (
                     <Components.Input
                       {...field}
+                      id="phone"
                       type="tel"
                       placeholder="Ej: 54222555"
                       className="w-90"
+                      autoComplete="tel"
                     />
                   )}
                 />
@@ -116,7 +119,6 @@ const Identificarse = () => {
                 )}
               </div>
 
-              {/* Contraseña */}
               <div className="form-group w-100 mb-3">
                 <label
                   htmlFor="password"
@@ -145,8 +147,10 @@ const Identificarse = () => {
                     <div className="password-input-container">
                       <Components.Input
                         {...field}
+                        id="password"
                         type={showPassword ? "text" : "password"}
                         placeholder="Ingresa tu contraseña"
+                        autoComplete="new-password"
                       />
                     </div>
                   )}
@@ -156,7 +160,6 @@ const Identificarse = () => {
                 )}
               </div>
 
-              {/* Terminos y condiciones */}
               <div className="w-100 text-start mb-3">
                 <Controller
                   name="terms"
@@ -166,14 +169,12 @@ const Identificarse = () => {
                     <div>
                       <input
                         {...field}
+                        id="terms"
                         className="form-check-input me-2 mb-2"
                         type="checkbox"
-                        id="flexCheckDefault"
+                        autoComplete="off"
                       />
-                      <label
-                        className="form-check-label"
-                        htmlFor="flexCheckDefault"
-                      >
+                      <label className="form-check-label" htmlFor="terms">
                         Aceptas nuestros Términos de Uso.
                       </label>
                     </div>
