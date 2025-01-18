@@ -13,11 +13,13 @@ import ReservarHabitacion from "./components/commons/ReservarHabitacion";
 import Galeria from "./components/views/Galeria";
 import Nosotros from "./components/views/Nosotros";
 import Identificarse from "./components/views/Identificarse";
+import ScrollToTop from "./components/views/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <Menu></Menu>
+      <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Principal />}></Route>
         <Route exact path="/habitaciones" element={<Habitaciones />}></Route>
