@@ -468,7 +468,19 @@ const Identificarse = () => {
 
                     {/* Contraseña */}
                     <div className="form-group mb-3">
-                      <label htmlFor="passwordSignUp">Contraseña</label>
+                      <label
+                        htmlFor="passwordSignUp"
+                        className="d-flex justify-content-between mb-2"
+                      >
+                        Contraseña (6 caracteres)
+                        <button
+                          type="button"
+                          className="rounded-3 border-0"
+                          onClick={togglePasswordVisibilitySignUp}
+                        >
+                          {showPasswordSignUp ? <FaEyeSlash /> : <FaEye />}
+                        </button>
+                      </label>
                       <Controller
                         name="passwordSignUp"
                         control={controlSignUp}
@@ -596,7 +608,19 @@ const Identificarse = () => {
 
                     {/* Contraseña */}
                     <div className="form-group mb-3">
-                      <label htmlFor="passwordLogin">Contraseña</label>
+                      <label
+                        htmlFor="passwordLogin "
+                        className="d-flex justify-content-between mb-1"
+                      >
+                        Contraseña
+                        <button
+                          type="button"
+                          className="rounded-3 border-0"
+                          onClick={togglePasswordVisibilitySignIn}
+                        >
+                          {showPasswordSignIn ? <FaEyeSlash /> : <FaEye />}
+                        </button>
+                      </label>
                       <Controller
                         name="passwordLogin"
                         control={controlSignIn}
