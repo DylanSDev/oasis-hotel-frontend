@@ -7,6 +7,7 @@ const Identificarse = () => {
   const [isSigningIn, setIsSigningIn] = useState(true);
   const [showPasswordSignUp, setShowPasswordSignUp] = useState(false);
   const [showPasswordSignIn, setShowPasswordSignIn] = useState(false);
+  const [showSignUpSm, setShowSignUpSm] = useState(false);
 
   // Cambiar la visibilidad de la contraseña
   const togglePasswordVisibilitySignUp = () => {
@@ -44,6 +45,7 @@ const Identificarse = () => {
 
   return (
     <section className="mainSection background-img-identificarse ">
+      {/* Login para tablets y computadoras  */}
       <article className="d-none d-md-flex justify-content-center py-5 min-vh-86 min-vh-md-60 text-poppins">
         {/* Crear Cuenta */}
         <Components.Container>
@@ -349,6 +351,305 @@ const Identificarse = () => {
             </Components.Overlay>
           </Components.OverlayContainer>
         </Components.Container>
+      </article>
+
+      {/* Login para teléfonos móviles */}
+      <article className="d-md-none py-4 text-poppins bg-light min-vh-100">
+        <div className="container">
+          <div className="row justify-content-center">
+            {/* Formulario Crear Cuenta */}
+            <div className={`col-11 ${!showSignUpSm ? "d-none" : ""}`}>
+              <div className="card mb-4 shadow-sm">
+                <div className="card-body">
+                  <h2 className="card-title text-center mb-4">Crear Cuenta</h2>
+                  <form
+                    onSubmit={handleSubmitSignUp(onSubmitSignUp)}
+                    className="fw-light"
+                  >
+                    {/* Nombre Completo */}
+                    <div className="form-group mb-3">
+                      <label htmlFor="username">Nombre Completo</label>
+                      <Controller
+                        name="username"
+                        control={controlSignUp}
+                        rules={{
+                          required: "El nombre es obligatorio",
+                          minLength: {
+                            value: 5,
+                            message:
+                              "El nombre debe tener al menos 5 caracteres",
+                          },
+                        }}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            id="username"
+                            className="form-control"
+                            type="text"
+                            placeholder="Ej: Oasis Hotel"
+                            autoComplete="name"
+                          />
+                        )}
+                      />
+                      {errorsSignUp.username && (
+                        <small className="text-danger">
+                          {errorsSignUp.username.message}
+                        </small>
+                      )}
+                    </div>
+
+                    {/* Email */}
+                    <div className="form-group mb-3">
+                      <label htmlFor="emailSignUp">Correo Electrónico</label>
+                      <Controller
+                        name="emailSignUp"
+                        control={controlSignUp}
+                        rules={{
+                          required: "El email es obligatorio",
+                          pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: "Email inválido",
+                          },
+                        }}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            id="emailSignUp"
+                            className="form-control"
+                            type="email"
+                            placeholder="Ej: ejemplo@oasis.com"
+                            autoComplete="email"
+                          />
+                        )}
+                      />
+                      {errorsSignUp.emailSignUp && (
+                        <small className="text-danger">
+                          {errorsSignUp.emailSignUp.message}
+                        </small>
+                      )}
+                    </div>
+
+                    {/* Número de Teléfono */}
+                    <div className="form-group mb-3">
+                      <label htmlFor="phone">Número de Teléfono</label>
+                      <Controller
+                        name="phone"
+                        control={controlSignUp}
+                        rules={{
+                          required: "El número es obligatorio",
+                          pattern: {
+                            value: /^[0-9]+$/i,
+                            message: "Solo se permiten números",
+                          },
+                          minLength: {
+                            value: 10,
+                            message:
+                              "El número debe tener al menos 10 caracteres",
+                          },
+                        }}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            id="phone"
+                            className="form-control"
+                            type="tel"
+                            placeholder="Ej: 54222555"
+                            autoComplete="tel"
+                          />
+                        )}
+                      />
+                      {errorsSignUp.phone && (
+                        <small className="text-danger">
+                          {errorsSignUp.phone.message}
+                        </small>
+                      )}
+                    </div>
+
+                    {/* Contraseña */}
+                    <div className="form-group mb-3">
+                      <label htmlFor="passwordSignUp">Contraseña</label>
+                      <Controller
+                        name="passwordSignUp"
+                        control={controlSignUp}
+                        rules={{
+                          required: "La contraseña es obligatoria",
+                          minLength: {
+                            value: 6,
+                            message:
+                              "La contraseña debe tener al menos 6 caracteres",
+                          },
+                        }}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            id="passwordSignUp"
+                            className="form-control"
+                            type={showPasswordSignUp ? "text" : "password"}
+                            placeholder="Ingresa tu contraseña"
+                            autoComplete="new-password"
+                          />
+                        )}
+                      />
+                      {errorsSignUp.passwordSignUp && (
+                        <small className="text-danger">
+                          {errorsSignUp.passwordSignUp.message}
+                        </small>
+                      )}
+                    </div>
+
+                    {/* Términos y Condiciones */}
+                    <div className="form-group mb-3">
+                      <Controller
+                        name="terms"
+                        control={controlSignUp}
+                        rules={{
+                          required: "Debes aceptar los términos de uso",
+                        }}
+                        render={({ field }) => (
+                          <div className="form-check">
+                            <input
+                              {...field}
+                              id="terms"
+                              className="form-check-input"
+                              type="checkbox"
+                              autoComplete="off"
+                            />
+                            <label className="form-check-label" htmlFor="terms">
+                              Acepto los Términos de Uso
+                            </label>
+                          </div>
+                        )}
+                      />
+                      {errorsSignUp.terms && (
+                        <small className="text-danger">
+                          {errorsSignUp.terms.message}
+                        </small>
+                      )}
+                    </div>
+
+                    <button type="submit" className="btn btn-primary w-100">
+                      Crear Cuenta
+                    </button>
+                  </form>
+                  <div className="d-flex justify-content-center mt-3">
+                    <button
+                      type="button"
+                      className="btn btn-link"
+                      onClick={() => setShowSignUpSm(false)}
+                    >
+                      ¿Ya tienes cuenta? Inicia sesión
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row justify-content-center">
+            {/* Formulario Iniciar Sesión */}
+            <div className={`col-11 ${showSignUpSm ? "d-none" : ""}`}>
+              <div className="card shadow-sm">
+                <div className="card-body">
+                  <h2 className="card-title text-center mb-4">
+                    Iniciar Sesión
+                  </h2>
+                  <form
+                    onSubmit={handleSubmitSignIn(onSubmitSignIn)}
+                    className="fw-light"
+                  >
+                    {/* Correo Electrónico */}
+                    <div className="form-group mb-3">
+                      <label htmlFor="emailLogin">Correo Electrónico</label>
+                      <Controller
+                        name="emailLogin"
+                        control={controlSignIn}
+                        rules={{
+                          required: "El correo es obligatorio",
+                          pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: "Correo inválido",
+                          },
+                        }}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            id="emailLogin"
+                            className="form-control"
+                            type="email"
+                            placeholder="Ej: ejemplo@oasis.com"
+                            autoComplete="email"
+                          />
+                        )}
+                      />
+                      {errorsSignIn.emailLogin && (
+                        <small className="text-danger">
+                          {errorsSignIn.emailLogin.message}
+                        </small>
+                      )}
+                    </div>
+
+                    {/* Contraseña */}
+                    <div className="form-group mb-3">
+                      <label htmlFor="passwordLogin">Contraseña</label>
+                      <Controller
+                        name="passwordLogin"
+                        control={controlSignIn}
+                        rules={{
+                          required: "La contraseña es obligatoria",
+                          minLength: {
+                            value: 6,
+                            message:
+                              "La contraseña debe tener al menos 6 caracteres",
+                          },
+                        }}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            id="passwordLogin"
+                            className="form-control"
+                            type={showPasswordSignIn ? "text" : "password"}
+                            placeholder="Ingresa tu contraseña"
+                            autoComplete="current-password"
+                          />
+                        )}
+                      />
+                      {errorsSignIn.passwordLogin && (
+                        <small className="text-danger">
+                          {errorsSignIn.passwordLogin.message}
+                        </small>
+                      )}
+                    </div>
+
+                    <div className="d-flex justify-content-end mb-3">
+                      <a href="#" className="text-decoration-none">
+                        ¿Olvidaste tu contraseña?
+                      </a>
+                    </div>
+
+                    <button type="submit" className="btn btn-primary w-100">
+                      Iniciar Sesión
+                    </button>
+                  </form>
+                  <div className="d-flex justify-content-center mt-3">
+                    <button
+                      type="button"
+                      className="btn btn-link"
+                      onClick={() => setShowSignUpSm(true)}
+                    >
+                      ¿No tienes cuenta? Crea una nueva
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </article>
     </section>
   );
