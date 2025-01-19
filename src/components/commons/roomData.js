@@ -24,7 +24,7 @@ export const roomData = {
     price: 1550,
     image:
       "https://res.cloudinary.com/dylansdev/image/upload/v1737177977/image_csb6h9.jpg",
-    capacity: 3,
+    capacity: 2,
     bedType: "Cama queen",
     sliderImages: [
       "https://res.cloudinary.com/dylansdev/image/upload/v1737178022/image_zbwjaa.jpg",
@@ -38,10 +38,10 @@ export const roomData = {
     name: "Presidencial",
     description:
       "Una villa donde renovará sus sentidos. Nuestro oasis ofrece una indescriptible vista a la laguna color jade, una alberca templada y un balcón privado donde puede solicitar un tratamiento de spa exclusivo para revitalizar sus sentidos. Destinamos un espacio de parsimonia y relajación sin igual para usted.",
-    price: 1550,
+    price: 3050,
     image:
       "https://res.cloudinary.com/dylansdev/image/upload/v1737178538/image_wltifm.jpg",
-    capacity: 3,
+    capacity: 2,
     bedType: "Cama queen",
     sliderImages: [
       "https://res.cloudinary.com/dylansdev/image/upload/v1737178557/image_koicxc.jpg",
@@ -55,7 +55,7 @@ export const roomData = {
     name: "Ejecutiva",
     description:
       "Con vista panorámica al mar Caribe, esta lujosa suite ubicada en planta superior con piscina. Disfrute de una vista panorámica ilimitada hacia el mar Caribe desde la privacidad de su suite ubicada en planta alta, cuenta con sala de estar, piscina privada climatizada al aire libre, patio privado con jacuzzi y ducha exterior; además con solo descender las escaleras de su suite estará a dos minutos de la playa. ",
-    price: 1550,
+    price: 2550,
     image:
       "https://res.cloudinary.com/dylansdev/image/upload/v1737178830/image_tlvesp.jpg",
     capacity: 3,
@@ -72,7 +72,7 @@ export const roomData = {
     name: "Junior",
     description:
       "Una inigualable vista al mar Caribe  le ofrece esta suite ubicada en el segundo nivel,  invitándole a deleitarse con el sonido de las olas para comenzar el día. Despiértese todas las mañanas con vista al océano mientras los rayos del sol le sorprenden en su habitación. Salga de su suite de ensueño al balcón lateral y sumérjase en la piscina privada, mientras disfruta de la mejor vista del Caribe. ",
-    price: 1550,
+    price: 2050,
     image:
       "https://res.cloudinary.com/dylansdev/image/upload/v1737179676/image_wlhzsi.jpg",
     capacity: 3,
