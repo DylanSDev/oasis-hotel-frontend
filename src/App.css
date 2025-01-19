@@ -141,3 +141,10 @@ body::-webkit-scrollbar-thumb {
   border-color: 0px;
   color: white !important;
 }
+
+/* Estilos para la página identificarse */
+.background-img-identificarse {
+  background-image: url("https://res.cloudinary.com/dylansdev/image/upload/v1737247274/pexels-willianjusten-16116225_ipy6bl.jpg");
+  background-size: cover;
+  background-position: center;
+}

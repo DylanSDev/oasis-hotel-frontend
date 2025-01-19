@@ -43,7 +43,7 @@ const Identificarse = () => {
   };
 
   return (
-    <section className="mainSection">
+    <section className="mainSection background-img-identificarse ">
       <article className="d-none d-md-flex justify-content-center py-5 min-vh-86 min-vh-md-60 text-poppins">
         {/* Crear Cuenta */}
         <Components.Container>
