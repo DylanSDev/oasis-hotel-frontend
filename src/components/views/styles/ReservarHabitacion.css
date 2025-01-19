@@ -1,0 +1,32 @@
+.rdrMonths {
+  justify-content: space-around;
+}
+
+.rdrMonth {
+  width: 100%;
+  padding-inline: 10px;
+}
+
+.rdrDateDisplayItem input {
+  color: #89bbad;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.rdrDateDisplayItem {
+  border-radius: 25px;
+}
+
+.rdrDateDisplayWrapper {
+  border-radius: 25px;
+}
+
+.rdrMonthAndYearPickers {
+  font-size: 17px;
+}
+
+.rdrMonthName {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}

@@ -8,7 +8,7 @@
 }
 
 .text-poppins {
-  font-family: "Poppins";
+  font-family: "Poppins" !important;
 }
 
 .text-justify {
@@ -24,8 +24,16 @@
   color: #e8c093 !important;
 }
 
+.color-cristalina {
+  color: #89bbad;
+}
+
 .bg-arena {
   background-color: #e8c093 !important;
+}
+
+.bg-cristalina {
+  background-color: #89bbad !important;
 }
 
 /* Estilos generales */

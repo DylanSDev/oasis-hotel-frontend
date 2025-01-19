@@ -9,7 +9,7 @@ import Error404 from "./components/views/Error404";
 import Contacto from "./components/views/Contacto";
 import Habitaciones from "./components/views/Habitaciones";
 import DetalleHabitacion from "./components/commons/DetalleHabitacion";
-import ReservarHabitacion from "./components/commons/ReservarHabitacion";
+import ReservarHabitacion from "./components/views/ReservarHabitacion";
 import Galeria from "./components/views/Galeria";
 import Nosotros from "./components/views/Nosotros";
 import Identificarse from "./components/views/Identificarse";
