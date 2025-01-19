@@ -366,9 +366,9 @@ const Identificarse = () => {
                   >
                     {/* Nombre Completo */}
                     <div className="form-group mb-3">
-                      <label htmlFor="username">Nombre Completo</label>
+                      <label htmlFor="usernameSm">Nombre Completo</label>
                       <Controller
-                        name="username"
+                        name="usernameSm"
                         control={controlSignUp}
                         rules={{
                           required: "El nombre es obligatorio",
@@ -382,7 +382,7 @@ const Identificarse = () => {
                         render={({ field }) => (
                           <input
                             {...field}
-                            id="username"
+                            id="usernameSm"
                             className="form-control"
                             type="text"
                             placeholder="Ej: Oasis Hotel"
@@ -390,18 +390,18 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.username && (
+                      {errorsSignUp.usernameSm && (
                         <small className="text-danger">
-                          {errorsSignUp.username.message}
+                          {errorsSignUp.usernameSm.message}
                         </small>
                       )}
                     </div>
 
                     {/* Email */}
                     <div className="form-group mb-3">
-                      <label htmlFor="emailSignUp">Correo Electrónico</label>
+                      <label htmlFor="emailSignUpSm">Correo Electrónico</label>
                       <Controller
-                        name="emailSignUp"
+                        name="emailSignUpSm"
                         control={controlSignUp}
                         rules={{
                           required: "El email es obligatorio",
@@ -414,7 +414,7 @@ const Identificarse = () => {
                         render={({ field }) => (
                           <input
                             {...field}
-                            id="emailSignUp"
+                            id="emailSignUpSm"
                             className="form-control"
                             type="email"
                             placeholder="Ej: ejemplo@oasis.com"
@@ -422,18 +422,18 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.emailSignUp && (
+                      {errorsSignUp.emailSignUpSm && (
                         <small className="text-danger">
-                          {errorsSignUp.emailSignUp.message}
+                          {errorsSignUp.emailSignUpSm.message}
                         </small>
                       )}
                     </div>
 
                     {/* Número de Teléfono */}
                     <div className="form-group mb-3">
-                      <label htmlFor="phone">Número de Teléfono</label>
+                      <label htmlFor="phoneSm">Número de Teléfono</label>
                       <Controller
-                        name="phone"
+                        name="phoneSm"
                         control={controlSignUp}
                         rules={{
                           required: "El número es obligatorio",
@@ -451,7 +451,7 @@ const Identificarse = () => {
                         render={({ field }) => (
                           <input
                             {...field}
-                            id="phone"
+                            id="phoneSm"
                             className="form-control"
                             type="tel"
                             placeholder="Ej: 54222555"
@@ -459,9 +459,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.phone && (
+                      {errorsSignUp.phoneSm && (
                         <small className="text-danger">
-                          {errorsSignUp.phone.message}
+                          {errorsSignUp.phoneSm.message}
                         </small>
                       )}
                     </div>
@@ -469,7 +469,7 @@ const Identificarse = () => {
                     {/* Contraseña */}
                     <div className="form-group mb-3">
                       <label
-                        htmlFor="passwordSignUp"
+                        htmlFor="passwordSignUpSm"
                         className="d-flex justify-content-between mb-2"
                       >
                         Contraseña (6 caracteres)
@@ -482,7 +482,7 @@ const Identificarse = () => {
                         </button>
                       </label>
                       <Controller
-                        name="passwordSignUp"
+                        name="passwordSignUpSm"
                         control={controlSignUp}
                         rules={{
                           required: "La contraseña es obligatoria",
@@ -496,7 +496,7 @@ const Identificarse = () => {
                         render={({ field }) => (
                           <input
                             {...field}
-                            id="passwordSignUp"
+                            id="passwordSignUpSm"
                             className="form-control"
                             type={showPasswordSignUp ? "text" : "password"}
                             placeholder="Ingresa tu contraseña"
@@ -504,9 +504,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.passwordSignUp && (
+                      {errorsSignUp.passwordSignUpSm && (
                         <small className="text-danger">
-                          {errorsSignUp.passwordSignUp.message}
+                          {errorsSignUp.passwordSignUpSm.message}
                         </small>
                       )}
                     </div>
@@ -514,7 +514,7 @@ const Identificarse = () => {
                     {/* Términos y Condiciones */}
                     <div className="form-group mb-3">
                       <Controller
-                        name="terms"
+                        name="termsSm"
                         control={controlSignUp}
                         rules={{
                           required: "Debes aceptar los términos de uso",
@@ -523,20 +523,23 @@ const Identificarse = () => {
                           <div className="form-check">
                             <input
                               {...field}
-                              id="terms"
+                              id="termsSm"
                               className="form-check-input"
                               type="checkbox"
                               autoComplete="off"
                             />
-                            <label className="form-check-label" htmlFor="terms">
+                            <label
+                              className="form-check-label"
+                              htmlFor="termsSm"
+                            >
                               Acepto los Términos de Uso
                             </label>
                           </div>
                         )}
                       />
-                      {errorsSignUp.terms && (
+                      {errorsSignUp.termsSm && (
                         <small className="text-danger">
-                          {errorsSignUp.terms.message}
+                          {errorsSignUp.termsSm.message}
                         </small>
                       )}
                     </div>
@@ -576,9 +579,9 @@ const Identificarse = () => {
                   >
                     {/* Correo Electrónico */}
                     <div className="form-group mb-3">
-                      <label htmlFor="emailLogin">Correo Electrónico</label>
+                      <label htmlFor="emailLoginSm">Correo Electrónico</label>
                       <Controller
-                        name="emailLogin"
+                        name="emailLoginSm"
                         control={controlSignIn}
                         rules={{
                           required: "El correo es obligatorio",
@@ -591,7 +594,7 @@ const Identificarse = () => {
                         render={({ field }) => (
                           <input
                             {...field}
-                            id="emailLogin"
+                            id="emailLoginSm"
                             className="form-control"
                             type="email"
                             placeholder="Ej: ejemplo@oasis.com"
@@ -599,9 +602,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignIn.emailLogin && (
+                      {errorsSignIn.emailLoginSm && (
                         <small className="text-danger">
-                          {errorsSignIn.emailLogin.message}
+                          {errorsSignIn.emailLoginSm.message}
                         </small>
                       )}
                     </div>
@@ -609,7 +612,7 @@ const Identificarse = () => {
                     {/* Contraseña */}
                     <div className="form-group mb-3">
                       <label
-                        htmlFor="passwordLogin "
+                        htmlFor="passwordLoginSm"
                         className="d-flex justify-content-between mb-1"
                       >
                         Contraseña
@@ -622,7 +625,7 @@ const Identificarse = () => {
                         </button>
                       </label>
                       <Controller
-                        name="passwordLogin"
+                        name="passwordLoginSm"
                         control={controlSignIn}
                         rules={{
                           required: "La contraseña es obligatoria",
@@ -636,7 +639,7 @@ const Identificarse = () => {
                         render={({ field }) => (
                           <input
                             {...field}
-                            id="passwordLogin"
+                            id="passwordLoginSm"
                             className="form-control"
                             type={showPasswordSignIn ? "text" : "password"}
                             placeholder="Ingresa tu contraseña"
@@ -644,9 +647,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignIn.passwordLogin && (
+                      {errorsSignIn.passwordLoginSm && (
                         <small className="text-danger">
-                          {errorsSignIn.passwordLogin.message}
+                          {errorsSignIn.passwordLoginSm.message}
                         </small>
                       )}
                     </div>
