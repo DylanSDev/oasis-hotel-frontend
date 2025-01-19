@@ -354,14 +354,16 @@ const Identificarse = () => {
       </article>
 
       {/* Login para teléfonos móviles */}
-      <article className="d-md-none py-4 text-poppins bg-light min-vh-100">
-        <div className="container">
+      <article className="d-md-none py-5 text-poppins background-img-identificarse ">
+        <div className="container py-5">
+          {/* Formulario Crear Cuenta */}
           <div className="row justify-content-center">
-            {/* Formulario Crear Cuenta */}
             <div className={`col-11 ${!showSignUpSm ? "d-none" : ""}`}>
-              <div className="card mb-4 shadow-sm">
-                <div className="card-body">
-                  <h2 className="card-title text-center mb-4">Crear Cuenta</h2>
+              <div className="card mb-4 shadow-sm rounded-5">
+                <div className="card-body px-4">
+                  <h2 className="card-title text-center mt-4 mb-4 color-arena">
+                    Crear Cuenta
+                  </h2>
                   <form
                     onSubmit={handleSubmitSignUp(onSubmitSignUp)}
                     className="fw-light"
@@ -531,14 +533,17 @@ const Identificarse = () => {
                       )}
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-100">
+                    <button
+                      type="submit"
+                      className="btn bg-arena text-light fw-medium w-100"
+                    >
                       Crear Cuenta
                     </button>
                   </form>
                   <div className="d-flex justify-content-center mt-3">
                     <button
                       type="button"
-                      className="btn btn-link"
+                      className="btn btn-link text-dark mb-3"
                       onClick={() => setShowSignUpSm(false)}
                     >
                       ¿Ya tienes cuenta? Inicia sesión
@@ -549,12 +554,12 @@ const Identificarse = () => {
             </div>
           </div>
 
+          {/* Formulario Iniciar Sesión */}
           <div className="row justify-content-center">
-            {/* Formulario Iniciar Sesión */}
             <div className={`col-11 ${showSignUpSm ? "d-none" : ""}`}>
-              <div className="card shadow-sm">
-                <div className="card-body">
-                  <h2 className="card-title text-center mb-4">
+              <div className="card shadow-sm rounded-5">
+                <div className="card-body px-4">
+                  <h2 className="card-title text-center mt-3 mb-4 color-arena">
                     Iniciar Sesión
                   </h2>
                   <form
@@ -626,20 +631,23 @@ const Identificarse = () => {
                       )}
                     </div>
 
-                    <div className="d-flex justify-content-end mb-3">
-                      <a href="#" className="text-decoration-none">
+                    <div className="d-flex justify-content-center mb-3">
+                      <a href="#" className="text-decoration-none text-muted">
                         ¿Olvidaste tu contraseña?
                       </a>
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-100">
+                    <button
+                      type="submit"
+                      className="btn btn-primary w-100 bg-arena border-0"
+                    >
                       Iniciar Sesión
                     </button>
                   </form>
-                  <div className="d-flex justify-content-center mt-3">
+                  <div className="d-flex justify-content-center mt-3 ">
                     <button
                       type="button"
-                      className="btn btn-link"
+                      className="btn btn-link text-dark mb-3"
                       onClick={() => setShowSignUpSm(true)}
                     >
                       ¿No tienes cuenta? Crea una nueva
