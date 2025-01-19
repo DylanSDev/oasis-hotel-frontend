@@ -22,6 +22,14 @@ const Identificarse = () => {
     handleSubmit: handleSubmitSignUp,
     control: controlSignUp,
     formState: { errors: errorsSignUp },
+    reset: resetSignUp,
+  } = useForm();
+
+  const {
+    handleSubmit: handleSubmitSignUpMobile,
+    control: controlSignUpMobile,
+    formState: { errors: errorsSignUpMobile },
+    reset: resetSignUpMobile,
   } = useForm();
 
   // Manejador para el formulario de iniciar sesión
@@ -29,6 +37,14 @@ const Identificarse = () => {
     handleSubmit: handleSubmitSignIn,
     control: controlSignIn,
     formState: { errors: errorsSignIn },
+    reset: resetSignIn,
+  } = useForm();
+
+  const {
+    handleSubmit: handleSubmitSignInMobile,
+    control: controlSignInMobile,
+    formState: { errors: errorsSignInMobile },
+    reset: resetSignInMobile,
   } = useForm();
 
   const toggleSignIn = () => {
@@ -36,11 +52,23 @@ const Identificarse = () => {
   };
 
   const onSubmitSignUp = (data) => {
-    console.log("Registro", data);
+    console.log("Registro Desktop", data);
+    resetSignUp();
   };
 
   const onSubmitSignIn = (data) => {
-    console.log("Inicio de sesión", data);
+    console.log("Inicio de sesión Desktop", data);
+    resetSignIn();
+  };
+
+  const onSubmitSignUpMobile = (data) => {
+    console.log("Registro (Mobile)", data);
+    resetSignUpMobile();
+  };
+
+  const onSubmitSignInMobile = (data) => {
+    console.log("Inicio de sesión (Mobile)", data);
+    resetSignInMobile();
   };
 
   return (
@@ -361,7 +389,7 @@ const Identificarse = () => {
                     Crear Cuenta
                   </h2>
                   <form
-                    onSubmit={handleSubmitSignUp(onSubmitSignUp)}
+                    onSubmit={handleSubmitSignUpMobile(onSubmitSignUpMobile)}
                     className="fw-light"
                   >
                     {/* Nombre Completo */}
@@ -369,7 +397,7 @@ const Identificarse = () => {
                       <label htmlFor="usernameSm">Nombre Completo</label>
                       <Controller
                         name="usernameSm"
-                        control={controlSignUp}
+                        control={controlSignUpMobile}
                         rules={{
                           required: "El nombre es obligatorio",
                           minLength: {
@@ -390,9 +418,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.usernameSm && (
+                      {errorsSignUpMobile.usernameSm && (
                         <small className="text-danger">
-                          {errorsSignUp.usernameSm.message}
+                          {errorsSignUpMobile.usernameSm.message}
                         </small>
                       )}
                     </div>
@@ -402,7 +430,7 @@ const Identificarse = () => {
                       <label htmlFor="emailSignUpSm">Correo Electrónico</label>
                       <Controller
                         name="emailSignUpSm"
-                        control={controlSignUp}
+                        control={controlSignUpMobile}
                         rules={{
                           required: "El email es obligatorio",
                           pattern: {
@@ -422,9 +450,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.emailSignUpSm && (
+                      {errorsSignUpMobile.emailSignUpSm && (
                         <small className="text-danger">
-                          {errorsSignUp.emailSignUpSm.message}
+                          {errorsSignUpMobile.emailSignUpSm.message}
                         </small>
                       )}
                     </div>
@@ -434,7 +462,7 @@ const Identificarse = () => {
                       <label htmlFor="phoneSm">Número de Teléfono</label>
                       <Controller
                         name="phoneSm"
-                        control={controlSignUp}
+                        control={controlSignUpMobile}
                         rules={{
                           required: "El número es obligatorio",
                           pattern: {
@@ -459,9 +487,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.phoneSm && (
+                      {errorsSignUpMobile.phoneSm && (
                         <small className="text-danger">
-                          {errorsSignUp.phoneSm.message}
+                          {errorsSignUpMobile.phoneSm.message}
                         </small>
                       )}
                     </div>
@@ -483,7 +511,7 @@ const Identificarse = () => {
                       </label>
                       <Controller
                         name="passwordSignUpSm"
-                        control={controlSignUp}
+                        control={controlSignUpMobile}
                         rules={{
                           required: "La contraseña es obligatoria",
                           minLength: {
@@ -504,9 +532,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignUp.passwordSignUpSm && (
+                      {errorsSignUpMobile.passwordSignUpSm && (
                         <small className="text-danger">
-                          {errorsSignUp.passwordSignUpSm.message}
+                          {errorsSignUpMobile.passwordSignUpSm.message}
                         </small>
                       )}
                     </div>
@@ -515,7 +543,7 @@ const Identificarse = () => {
                     <div className="form-group mb-3">
                       <Controller
                         name="termsSm"
-                        control={controlSignUp}
+                        control={controlSignUpMobile}
                         rules={{
                           required: "Debes aceptar los términos de uso",
                         }}
@@ -537,9 +565,9 @@ const Identificarse = () => {
                           </div>
                         )}
                       />
-                      {errorsSignUp.termsSm && (
+                      {errorsSignUpMobile.termsSm && (
                         <small className="text-danger">
-                          {errorsSignUp.termsSm.message}
+                          {errorsSignUpMobile.termsSm.message}
                         </small>
                       )}
                     </div>
@@ -574,7 +602,7 @@ const Identificarse = () => {
                     Iniciar Sesión
                   </h2>
                   <form
-                    onSubmit={handleSubmitSignIn(onSubmitSignIn)}
+                    onSubmit={handleSubmitSignInMobile(onSubmitSignInMobile)}
                     className="fw-light"
                   >
                     {/* Correo Electrónico */}
@@ -582,7 +610,7 @@ const Identificarse = () => {
                       <label htmlFor="emailLoginSm">Correo Electrónico</label>
                       <Controller
                         name="emailLoginSm"
-                        control={controlSignIn}
+                        control={controlSignInMobile}
                         rules={{
                           required: "El correo es obligatorio",
                           pattern: {
@@ -602,9 +630,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignIn.emailLoginSm && (
+                      {errorsSignInMobile.emailLoginSm && (
                         <small className="text-danger">
-                          {errorsSignIn.emailLoginSm.message}
+                          {errorsSignInMobile.emailLoginSm.message}
                         </small>
                       )}
                     </div>
@@ -626,7 +654,7 @@ const Identificarse = () => {
                       </label>
                       <Controller
                         name="passwordLoginSm"
-                        control={controlSignIn}
+                        control={controlSignInMobile}
                         rules={{
                           required: "La contraseña es obligatoria",
                           minLength: {
@@ -647,9 +675,9 @@ const Identificarse = () => {
                           />
                         )}
                       />
-                      {errorsSignIn.passwordLoginSm && (
+                      {errorsSignInMobile.passwordLoginSm && (
                         <small className="text-danger">
-                          {errorsSignIn.passwordLoginSm.message}
+                          {errorsSignInMobile.passwordLoginSm.message}
                         </small>
                       )}
                     </div>
