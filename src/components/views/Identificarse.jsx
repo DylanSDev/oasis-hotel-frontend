@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import * as Components from "./Components";
+import * as Identify from "./Identify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Identificarse = () => {
@@ -48,13 +48,13 @@ const Identificarse = () => {
       {/* Login para tablets y computadoras  */}
       <article className="d-none d-md-flex justify-content-center py-5 min-vh-86 min-vh-md-60 text-poppins">
         {/* Crear Cuenta */}
-        <Components.Container>
-          <Components.SignUpContainer $signingIn={isSigningIn}>
-            <Components.Form
+        <Identify.Container>
+          <Identify.SignUpContainer $signingIn={isSigningIn}>
+            <Identify.Form
               onSubmit={handleSubmitSignUp(onSubmitSignUp)}
               className="fw-light"
             >
-              <Components.Title className="mb-3">Crear Cuenta</Components.Title>
+              <Identify.Title className="mb-3">Crear Cuenta</Identify.Title>
 
               <div className="form-group w-100 mb-3">
                 <label htmlFor="username">Nombre Completo</label>
@@ -70,7 +70,7 @@ const Identificarse = () => {
                   }}
                   defaultValue=""
                   render={({ field }) => (
-                    <Components.Input
+                    <Identify.Input
                       {...field}
                       id="username"
                       type="text"
@@ -101,7 +101,7 @@ const Identificarse = () => {
                   }}
                   defaultValue=""
                   render={({ field }) => (
-                    <Components.Input
+                    <Identify.Input
                       {...field}
                       id="emailSignUp"
                       type="email"
@@ -135,7 +135,7 @@ const Identificarse = () => {
                   }}
                   defaultValue=""
                   render={({ field }) => (
-                    <Components.Input
+                    <Identify.Input
                       {...field}
                       id="phone"
                       type="tel"
@@ -179,7 +179,7 @@ const Identificarse = () => {
                   defaultValue=""
                   render={({ field }) => (
                     <div className="password-input-container">
-                      <Components.Input
+                      <Identify.Input
                         {...field}
                         id="passwordSignUp"
                         type={showPasswordSignUp ? "text" : "password"}
@@ -223,19 +223,17 @@ const Identificarse = () => {
                 )}
               </div>
 
-              <Components.Button type="submit">Crear Cuenta</Components.Button>
-            </Components.Form>
-          </Components.SignUpContainer>
+              <Identify.Button type="submit">Crear Cuenta</Identify.Button>
+            </Identify.Form>
+          </Identify.SignUpContainer>
 
           {/* Iniciar Sesión */}
-          <Components.SignInContainer $signingIn={isSigningIn}>
-            <Components.Form
+          <Identify.SignInContainer $signingIn={isSigningIn}>
+            <Identify.Form
               onSubmit={handleSubmitSignIn(onSubmitSignIn)}
               className="fw-light"
             >
-              <Components.Title className="mb-3">
-                Iniciar Sesión
-              </Components.Title>
+              <Identify.Title className="mb-3">Iniciar Sesión</Identify.Title>
 
               {/* Correo Electrónico */}
               <div className="form-group w-100 mb-3">
@@ -252,7 +250,7 @@ const Identificarse = () => {
                   }}
                   defaultValue=""
                   render={({ field }) => (
-                    <Components.Input
+                    <Identify.Input
                       {...field}
                       id="emailLogin"
                       type="email"
@@ -296,7 +294,7 @@ const Identificarse = () => {
                   defaultValue=""
                   render={({ field }) => (
                     <div className="password-input-container">
-                      <Components.Input
+                      <Identify.Input
                         {...field}
                         id="passwordLogin"
                         type={showPasswordSignIn ? "text" : "password"}
@@ -314,43 +312,41 @@ const Identificarse = () => {
               </div>
 
               {/* Olvidaste tu contraseña */}
-              <Components.Anchor href="#">
+              <Identify.Anchor href="#">
                 ¿Olvidaste tu contraseña?
-              </Components.Anchor>
+              </Identify.Anchor>
 
               {/* Botón Iniciar Sesión */}
-              <Components.Button type="submit">
-                INICIAR SESIÓN
-              </Components.Button>
-            </Components.Form>
-          </Components.SignInContainer>
+              <Identify.Button type="submit">INICIAR SESIÓN</Identify.Button>
+            </Identify.Form>
+          </Identify.SignInContainer>
 
           {/* Overlay de Iniciar Sesión */}
-          <Components.OverlayContainer $signingIn={isSigningIn}>
-            <Components.Overlay $signingIn={isSigningIn}>
-              <Components.LeftOverlayPanel $signingIn={isSigningIn}>
-                <Components.Title>¿Ya tienes cuenta?</Components.Title>
-                <Components.Paragraph>
+          <Identify.OverlayContainer $signingIn={isSigningIn}>
+            <Identify.Overlay $signingIn={isSigningIn}>
+              <Identify.LeftOverlayPanel $signingIn={isSigningIn}>
+                <Identify.Title>¿Ya tienes cuenta?</Identify.Title>
+                <Identify.Paragraph>
                   Inicia sesión y disfruta de nuestros servicios.
-                </Components.Paragraph>
-                <Components.GhostButton onClick={toggleSignIn}>
+                </Identify.Paragraph>
+                <Identify.GhostButton onClick={toggleSignIn}>
                   INICIAR SESIÓN
-                </Components.GhostButton>
-              </Components.LeftOverlayPanel>
+                </Identify.GhostButton>
+              </Identify.LeftOverlayPanel>
 
               {/* Overlay de Registrarse */}
-              <Components.RightOverlayPanel $signingIn={isSigningIn}>
-                <Components.Title>¿No tienes cuenta?</Components.Title>
-                <Components.Paragraph>
+              <Identify.RightOverlayPanel $signingIn={isSigningIn}>
+                <Identify.Title>¿No tienes cuenta?</Identify.Title>
+                <Identify.Paragraph>
                   Regístrate y disfruta de nuestros servicios.
-                </Components.Paragraph>
-                <Components.GhostButton onClick={toggleSignIn}>
+                </Identify.Paragraph>
+                <Identify.GhostButton onClick={toggleSignIn}>
                   REGISTRARSE
-                </Components.GhostButton>
-              </Components.RightOverlayPanel>
-            </Components.Overlay>
-          </Components.OverlayContainer>
-        </Components.Container>
+                </Identify.GhostButton>
+              </Identify.RightOverlayPanel>
+            </Identify.Overlay>
+          </Identify.OverlayContainer>
+        </Identify.Container>
       </article>
 
       {/* Login para teléfonos móviles */}
