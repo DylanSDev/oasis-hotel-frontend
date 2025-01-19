@@ -30,3 +30,13 @@
   font-size: 15px;
   font-weight: bold;
 }
+
+.custom-swal-popup {
+  border-radius: 30px !important; /* Más redondeado */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.custom-swal-button {
+  border-radius: 50px !important; /* Botón circular */
+  padding: 10px 20px; /* Tamaño más grande */
+}

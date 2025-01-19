@@ -7,8 +7,9 @@ import { es } from "date-fns/locale";
 import "./styles/ReservarHabitacion.css";
 import { roomData } from "../commons/roomData";
 import { useParams, Link } from "react-router-dom";
-import { FaWifi, FaTv, FaBed, FaUser, FaSun } from "react-icons/fa";
-import { BsStarFill, BsEggFried } from "react-icons/bs";
+import { FaBed, FaUser, FaSun } from "react-icons/fa";
+import { BsEggFried } from "react-icons/bs";
+import Swal from "sweetalert2";
 
 const ReservarHabitacion = () => {
   const { roomType } = useParams();
@@ -26,12 +27,42 @@ const ReservarHabitacion = () => {
     setDateRange([ranges.selection]);
   };
 
-  const handlePrintDates = () => {
+  const handleVerifyAvailability = () => {
     const startDate = dateRange[0].startDate;
     const endDate = dateRange[0].endDate;
 
-    console.log("Check-in:", startDate.toLocaleDateString());
-    console.log("Check-out:", endDate.toLocaleDateString());
+    // Se simula la verificación (después se cambiara por una consulta al backend)
+    const isAvailable = 1;
+
+    if (isAvailable) {
+      // Modal para disponibilidad
+      Swal.fire({
+        icon: "success",
+        title: "Habitación disponible",
+        text: `Tenemos disponibles las mejores "${room.category} ${
+          room.name
+        }"  desde el: ${startDate.toLocaleDateString()} al ${endDate.toLocaleDateString()}.`,
+        confirmButtonText: "Confirmar Reserva",
+        confirmButtonColor: "#89bbad",
+        customClass: {
+          popup: "custom-swal-popup", // Clase personalizada
+          confirmButton: "custom-swal-button", // Clase para el botón
+        },
+      });
+    } else {
+      // Modal para no disponibilidad
+      Swal.fire({
+        icon: "error",
+        title: "Sin disponibilidad",
+        text: `No hay habitaciones disponibles desde del ${startDate.toLocaleDateString()} al ${endDate.toLocaleDateString()}.`,
+        confirmButtonText: "Intentar otra fecha",
+        confirmButtonColor: "#d33",
+        customClass: {
+          popup: "custom-swal-popup", // Clase personalizada
+          confirmButton: "custom-swal-button", // Clase para el botón
+        },
+      });
+    }
   };
 
   return (
@@ -64,7 +95,7 @@ const ReservarHabitacion = () => {
               <div className="w-100 text-center">
                 <button
                   className="btn bg-cristalina text-poppins fw-medium text-light py-2 rounded-4"
-                  onClick={handlePrintDates}
+                  onClick={handleVerifyAvailability}
                 >
                   Verificar Disponibilidad
                 </button>
