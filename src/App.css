@@ -156,3 +156,8 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
   background-position: center;
 }
+
+/* Contenedor Error 404 */
+.contenedor-404 {
+  background-color: #eedac4a7;
+}
